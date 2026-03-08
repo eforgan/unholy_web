@@ -398,18 +398,6 @@
             z-index: 0;
         }
 
-        .hero-logo-animated {
-            position: absolute;
-            top: 30%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            max-width: 80%;
-            max-height: 50vh;
-            z-index: 10;
-            animation: logoAppear 4s ease-in-out infinite;
-            opacity: 0;
-        }
-
         .hero-logo-text {
             position: absolute;
             left: 0;
@@ -432,13 +420,6 @@
             padding-left: 30px;
             overflow: visible;
             line-height: 2;
-        }
-
-        @keyframes logoAppear {
-            0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
-            20% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-            80% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-            100% { opacity: 0; transform: translate(-50%, -50%) scale(1.1); }
         }
 
         @keyframes laserGlow {
@@ -1887,7 +1868,6 @@
         <!-- Hero Section -->
         <section id="home" class="hero page-section">
             <video src="COMPLETO/optimized/1.mp4" autoplay loop muted playsinline></video>
-            <img src="COMPLETO/LOGO UNHOLY DEVOTION 2024.png" alt="UNHOLY DEVOTION" class="hero-logo-animated">
             <div class="hero-logo-text">UNHOLY DEVOTION</div>
         </section>
 

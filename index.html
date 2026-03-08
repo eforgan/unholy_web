@@ -400,14 +400,30 @@
 
         .hero-logo-center {
             position: absolute;
-            top: calc(50% - 200px);
+            top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -100px);
             width: 30%;
             height: auto;
             z-index: 10;
             animation: logoCenterShow 15s ease-in-out infinite;
             filter: hue-rotate(-120deg) saturate(200%) brightness(1.1);
+        }
+
+        .hero-logo-center::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 0, 0, 0.8), transparent);
+            animation: laserSweep 3s linear infinite;
+        }
+
+        @keyframes laserSweep {
+            0% { left: -100%; }
+            100% { left: 200%; }
         }
 
         @keyframes logoCenterShow {

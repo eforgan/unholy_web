@@ -1,0 +1,29 @@
+# Robots.txt - UNHOLY DEVOTION
+# https://unholydevotion.com/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://unholydevotion.com/sitemap.xml
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /scripts/
+Disallow: /data/
+
+# Crawl delay (be respectful)
+Crawl-delay: 1
+
+# Social media crawlers
+User-agent: twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Slackbot
+Allow: /

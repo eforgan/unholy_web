@@ -288,16 +288,7 @@
             justify-content: space-between;
             align-items: center;
             z-index: 100;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
-        }
-
-        .nav-logo {
-            font-family: 'Syncopate', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--accent);
-            letter-spacing: 0.3em;
-            text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+            background: transparent;
         }
 
         .nav-links {
@@ -325,17 +316,23 @@
         }
 
         section {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 100px;
+            padding: 120px 50px 100px;
+            scroll-margin-top: 80px;
+            position: relative;
+            background: var(--bg);
         }
 
         .hero {
             position: relative;
             overflow: visible;
             padding-left: 100px;
+            padding-top: 0;
+            background: transparent;
+        }
         }
 
         .hero video {
@@ -363,7 +360,7 @@
         .hero-logo {
             position: absolute;
             left: 0;
-            top: 20%;
+            top: 5%;
             height: 60%;
             font-family: 'Syncopate', sans-serif;
             font-size: 2vw;
@@ -1080,9 +1077,9 @@
 
         /* Nav scroll effect */
         nav.scrolled {
-            background: rgba(0, 0, 0, 0.95);
+            background: rgba(0, 0, 0, 0.8);
             padding: 15px 40px;
-            border-bottom: 1px solid rgba(255, 0, 0, 0.3);
+            border-bottom: none;
         }
 
         /* Page Transitions */
@@ -1794,7 +1791,7 @@
 
 
     <nav>
-        <div class="nav-logo">UNHOLY</div>
+        <div></div>
         <div class="nav-links">
             <a href="#home" class="active">Home</a>
             <a href="#bio">Bio</a>

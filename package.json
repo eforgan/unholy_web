@@ -1,0 +1,13 @@
+{
+    "name": "unholy-web-project",
+    "version": "1.0.0",
+    "description": "Premium brand showcase for UNHOLY",
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "vite": "^6.0.0"
+    }
+}

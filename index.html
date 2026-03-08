@@ -406,6 +406,14 @@
             width: 30%;
             height: auto;
             z-index: 10;
+            animation: logoVisible 30s ease-in-out infinite;
+        }
+
+        @keyframes logoVisible {
+            0% { opacity: 0; }
+            16% { opacity: 1; }
+            83% { opacity: 1; }
+            100% { opacity: 0; }
         }
 
         .hero-logo-center::after {

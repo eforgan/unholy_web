@@ -398,7 +398,19 @@
             z-index: 0;
         }
 
-        .hero-logo {
+        .hero-logo-animated {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 80%;
+            max-height: 70vh;
+            z-index: 10;
+            animation: logoAppear 4s ease-in-out infinite;
+            opacity: 0;
+        }
+
+        .hero-logo-text {
             position: absolute;
             left: 0;
             top: 5%;
@@ -422,9 +434,11 @@
             line-height: 2;
         }
 
-        .hero-logo:hover {
-            animation: logoPulse 0.5s ease-in-out infinite alternate, glitch-rgb 0.3s infinite, glitch-skew 0.3s infinite;
-            text-shadow: 0 0 30px #ff0000, 0 0 60px #ff0000, -2px 0 #00ff41, 2px 0 #00ff41;
+        @keyframes logoAppear {
+            0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+            20% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+            80% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+            100% { opacity: 0; transform: translate(-50%, -50%) scale(1.1); }
         }
 
         @keyframes logoPulse {
@@ -1858,7 +1872,8 @@
         <!-- Hero Section -->
         <section id="home" class="hero page-section">
             <video src="COMPLETO/optimized/1.mp4" autoplay loop muted playsinline></video>
-            <div class="hero-logo">UNHOLY DEVOTION</div>
+            <img src="COMPLETO/LOGO UNHOLY DEVOTION 2024.png" alt="UNHOLY DEVOTION" class="hero-logo-animated">
+            <div class="hero-logo-text">UNHOLY DEVOTION</div>
         </section>
 
         <!-- Bio Section -->

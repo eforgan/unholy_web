@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOG | UNHOLY DEVOTION</title>
+    
+    <meta name="description" content="UNHOLY DEVOTION news, updates, behind the scenes and artist interviews.">
+    <meta name="keywords" content="UNHOLY, DEVOTION, news, blog, updates, behind the scenes, interview">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="BLOG | UNHOLY DEVOTION">
+    <meta property="og:description" content="Latest news and updates from UNHOLY DEVOTION.">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Work+Sans:wght@200;400;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #000000;
+            --accent: #ff0000;
+            --text: #E5E5E5;
+            --steel: #888888;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
+        
+        html { scroll-behavior: smooth; }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Work Sans', 'Roboto Mono', monospace;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 9996;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        }
+
+        .cursor {
+            width: 12px; height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            box-shadow: 0 0 10px var(--accent), 0 0 30px var(--accent);
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 9997;
+            background: repeating-linear-gradient(0deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 1px, transparent 1px, transparent 3px);
+            opacity: 0.3;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 25px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: transparent;
+        }
+
+        nav.scrolled { background: rgba(0, 0, 0, 0.9); padding: 15px 40px; }
+
+        .nav-logo {
+            font-family: 'Syncopate', system-ui;
+            font-size: 0.8rem;
+            color: var(--accent);
+            text-decoration: none;
+            letter-spacing: 0.2em;
+            text-shadow: 0 0 10px var(--accent);
+        }
+
+        .nav-links { display: flex; gap: 30px; }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.7rem;
+            font-family: 'Syncopate', system-ui;
+            transition: all 0.3s;
+            letter-spacing: 0.15em;
+            opacity: 0.8;
+            padding: 8px 12px;
+            border: 1px solid transparent;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+            opacity: 1;
+        }
+
+        .hero {
+            min-height: 50vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 150px 50px 60px;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 4vw;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: var(--accent);
+            text-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--steel);
+            letter-spacing: 0.3em;
+        }
+
+        .section-title {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 1.5rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            margin-bottom: 50px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--accent);
+            display: inline-block;
+        }
+
+        .section-title::before { content: '//'; margin-right: 10px; }
+
+        section { min-height: 100vh; padding: 60px 50px 100px; background: var(--bg); }
+
+        .blog-filters {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 1px solid #333;
+            color: var(--steel);
+            padding: 12px 30px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.7rem;
+            cursor: none;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            border-color: var(--accent);
+            color: var(--accent);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+        }
+
+        .featured-post {
+            max-width: 900px;
+            margin: 0 auto 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            background: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
+            border: 1px solid #222;
+            overflow: hidden;
+        }
+
+        .featured-post:hover {
+            border-color: var(--accent);
+            box-shadow: 0 0 40px rgba(255, 0, 0, 0.2);
+        }
+
+        .featured-image {
+            aspect-ratio: 4/3;
+            overflow: hidden;
+        }
+
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(1) brightness(0.7);
+            transition: all 0.5s;
+        }
+
+        .featured-post:hover .featured-image img {
+            filter: grayscale(0) brightness(1);
+            transform: scale(1.05);
+        }
+
+        .featured-content {
+            padding: 30px;
+        }
+
+        .post-category {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 10px;
+        }
+
+        .post-date {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--steel);
+            margin-bottom: 15px;
+        }
+
+        .post-title {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 1.3rem;
+            color: var(--text);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .post-excerpt {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--steel);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .read-more {
+            display: inline-block;
+            padding: 10px 25px;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            font-family: 'Syncopate', sans-serif;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .read-more:hover {
+            background: var(--accent);
+            color: #000;
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .blog-card {
+            background: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
+            border: 1px solid #222;
+            overflow: hidden;
+            transition: all 0.4s;
+        }
+
+        .blog-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.15);
+            transform: translateY(-3px);
+        }
+
+        .blog-card-image {
+            aspect-ratio: 16/9;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .blog-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(1) brightness(0.7);
+            transition: all 0.5s;
+        }
+
+        .blog-card:hover .blog-card-image img {
+            filter: grayscale(0) brightness(1);
+            transform: scale(1.05);
+        }
+
+        .blog-card-content {
+            padding: 25px;
+        }
+
+        .blog-card:hover .post-title {
+            color: var(--accent);
+        }
+
+        footer {
+            padding: 40px 60px;
+            text-align: center;
+            border-top: 1px solid var(--accent);
+            font-size: 0.65rem;
+            font-family: 'Roboto Mono', monospace;
+            color: var(--steel);
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+        }
+
+        footer::before {
+            content: '[ SYSTEM STATUS: ONLINE ]';
+            display: block;
+            margin-bottom: 20px;
+            color: var(--accent);
+            text-shadow: 0 0 10px var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            color: var(--steel);
+            text-decoration: none;
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            transition: all 0.3s;
+            padding: 8px 15px;
+            border: 1px solid transparent;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            nav { padding: 15px 20px; }
+            .nav-links { gap: 12px; }
+            .nav-links a { font-size: 0.55rem; }
+            .hero { padding: 120px 20px 40px; }
+            .hero-title { font-size: 2rem; }
+            section { padding: 40px 20px; }
+            .featured-post { grid-template-columns: 1fr; }
+            .blog-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cursor" id="cursor"></div>
+    <div class="scanlines"></div>
+
+    <nav>
+        <a href="../index.html" class="nav-logo">UNHOLY</a>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../releases.html">Releases</a>
+            <a href="../merch.html">Merch</a>
+            <a href="../about.html">About</a>
+            <a href="../press.html">Press</a>
+            <a href="index.html" class="active">Blog</a>
+            <a href="../index.html#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1 class="hero-title">BLOG</h1>
+        <p class="hero-subtitle">News // Updates // Behind The Scenes</p>
+    </section>
+
+    <section>
+        <div style="text-align: center;">
+            <h2 class="section-title">LATEST POSTS</h2>
+
+            <div class="blog-filters">
+                <button class="filter-btn active" data-cat="all">All</button>
+                <button class="filter-btn" data-cat="news">News</button>
+                <button class="filter-btn" data-cat="release">Releases</button>
+                <button class="filter-btn" data-cat="tour">Tour</button>
+                <button class="filter-btn" data-cat="bts">Behind The Scenes</button>
+            </div>
+
+            <article class="featured-post" data-cat="release">
+                <div class="featured-image">
+                    <img src="../COMPLETO/35.jpg" alt="New Release">
+                </div>
+                <div class="featured-content">
+                    <span class="post-category">New Release</span>
+                    <span class="post-date">2026.03.01</span>
+                    <h3 class="post-title">Genesis IV: The New EP Has Arrived</h3>
+                    <p class="post-excerpt">After months in the studio, we're thrilled to announce our latest EP "Genesis IV" is now available on all platforms. Four tracks of pure industrial darkness...</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <div class="blog-grid">
+                <article class="blog-card" data-cat="tour">
+                    <div class="blog-card-image">
+                        <img src="../COMPLETO/PORTADA.png" alt="Tour">
+                    </div>
+                    <div class="blog-card-content">
+                        <span class="post-category">Tour</span>
+                        <span class="post-date">2026.02.25</span>
+                        <h3 class="post-title">2026 World Tour Announced</h3>
+                        <p class="post-excerpt">Berlin, London, Tokyo, New York - we're coming to a city near you. Full dates and ticket info inside...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-cat="bts">
+                    <div class="blog-card-image">
+                        <img src="../COMPLETO/Art 1.png" alt="Studio">
+                    </div>
+                    <div class="blog-card-content">
+                        <span class="post-category">Behind The Scenes</span>
+                        <span class="post-date">2026.02.15</span>
+                        <h3 class="post-title">Inside The Studio: Hardware Set</h3>
+                        <p class="post-excerpt">A look at the equipment and techniques used in creating our latest hardware-focused release...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-cat="news">
+                    <div class="blog-card-image">
+                        <img src="../COMPLETO/EXPERIMENT 2.png" alt="News">
+                    </div>
+                    <div class="blog-card-content">
+                        <span class="post-category">News</span>
+                        <span class="post-date">2026.01.28</span>
+                        <h3 class="post-title">Collaboration Announced</h3>
+                        <p class="post-excerpt">Exciting news! We're working with some incredible artists on upcoming projects. More details soon...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-cat="release">
+                    <div class="blog-card-image">
+                        <img src="../COMPLETO/UNHOLY 2.png" alt="Album">
+                    </div>
+                    <div class="blog-card-content">
+                        <span class="post-category">Releases</span>
+                        <span class="post-date">2026.01.10</span>
+                        <h3 class="post-title">Year In Review: 2025</h3>
+                        <p class="post-excerpt">A look back at our releases, tours, and milestones from an incredible year...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-cat="bts">
+                    <div class="blog-card-image">
+                        <img src="../COMPLETO/PORTADA2.png" alt="Interview">
+                    </div>
+                    <div class="blog-card-content">
+                        <span class="post-category">Behind The Scenes</span>
+                        <span class="post-date">2025.12.20</span>
+                        <h3 class="post-title">Gear Talk: Our Live Setup</h3>
+                        <p class="post-excerpt">Breaking down the instruments and equipment that shape our live performances...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-cat="tour">
+                    <div class="blog-card-image">
+                        <img src="../COMPLETO/35.jpg" alt="Photos">
+                    </div>
+                    <div class="blog-card-content">
+                        <span class="post-category">Tour</span>
+                        <span class="post-date">2025.12.05</span>
+                        <h3 class="post-title">Photo Gallery: Europe Tour</h3>
+                        <p class="post-excerpt">Highlights from our recent European tour. Photos from Berlin, Paris, Amsterdam and more...</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://instagram.com/unholydevotion" target="_blank">INSTAGRAM</a>
+            <a href="https://twitter.com/unholydevotion" target="_blank">TWITTER</a>
+            <a href="https://soundcloud.com/unholydevotion" target="_blank">SOUNDCLOUD</a>
+            <a href="https://youtube.com/@unholydevotion" target="_blank">YOUTUBE</a>
+            <a href="https://spotify.com/artist/unholydevotion" target="_blank">SPOTIFY</a>
+        </div>
+        <p>&copy; 2026 UNHOLY DEVOTION. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script>
+        const cursor = document.getElementById('cursor');
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (!prefersReducedMotion) {
+            let mouseX = 0, mouseY = 0;
+            let cursorX = 0, cursorY = 0;
+
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+
+            function animateCursor() {
+                cursorX += (mouseX - cursorX) * 0.2;
+                cursorY += (mouseY - cursorY) * 0.2;
+                cursor.style.left = cursorX - 6 + 'px';
+                cursor.style.top = cursorY - 6 + 'px';
+                requestAnimationFrame(animateCursor);
+            }
+            animateCursor();
+
+            const interactiveElements = document.querySelectorAll('a, button');
+            interactiveElements.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursor.style.transform = 'scale(2)';
+                    cursor.style.background = '#00ff41';
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursor.style.transform = 'scale(1)';
+                    cursor.style.background = '#ff0000';
+                });
+            });
+        } else {
+            cursor.style.display = 'none';
+        }
+
+        window.addEventListener('scroll', () => {
+            document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const blogCards = document.querySelectorAll('.blog-card, .featured-post');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const cat = btn.dataset.cat;
+                blogCards.forEach(card => {
+                    if (cat === 'all' || card.dataset.cat === cat) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRESS | UNHOLY DEVOTION</title>
+    
+    <meta name="description" content="UNHOLY DEVOTION press kit. High-res photos, logos, biography and media inquiries.">
+    <meta name="keywords" content="UNHOLY, DEVOTION, press, press kit, media, biography, logos, photos">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="PRESS | UNHOLY DEVOTION">
+    <meta property="og:description" content="Press kit and media resources for UNHOLY DEVOTION.">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Work+Sans:wght@200;400;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #000000;
+            --accent: #ff0000;
+            --text: #E5E5E5;
+            --steel: #888888;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
+        html { scroll-behavior: smooth; }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Work Sans', 'Roboto Mono', monospace;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 9996;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        }
+
+        .cursor {
+            width: 12px; height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            box-shadow: 0 0 10px var(--accent), 0 0 30px var(--accent);
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 9997;
+            background: repeating-linear-gradient(0deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 1px, transparent 1px, transparent 3px);
+            opacity: 0.3;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 25px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: transparent;
+        }
+
+        nav.scrolled { background: rgba(0, 0, 0, 0.9); padding: 15px 40px; }
+
+        .nav-logo {
+            font-family: 'Syncopate', system-ui;
+            font-size: 0.8rem;
+            color: var(--accent);
+            text-decoration: none;
+            letter-spacing: 0.2em;
+            text-shadow: 0 0 10px var(--accent);
+        }
+
+        .nav-links { display: flex; gap: 30px; }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.7rem;
+            font-family: 'Syncopate', system-ui;
+            transition: all 0.3s;
+            letter-spacing: 0.15em;
+            opacity: 0.8;
+            padding: 8px 12px;
+            border: 1px solid transparent;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+            opacity: 1;
+        }
+
+        .hero {
+            min-height: 40vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 150px 50px 40px;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 4vw;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: var(--accent);
+            text-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--steel);
+            letter-spacing: 0.3em;
+        }
+
+        .section-title {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 1.5rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            margin-bottom: 50px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--accent);
+            display: inline-block;
+        }
+
+        .section-title::before { content: '//'; margin-right: 10px; }
+
+        section { padding: 50px 50px 80px; background: var(--bg); }
+
+        .press-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .press-section {
+            margin-bottom: 60px;
+        }
+
+        .bio-box {
+            background: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
+            border: 1px solid #222;
+            padding: 40px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--steel);
+            line-height: 2;
+            position: relative;
+        }
+
+        .bio-box::before {
+            content: 'BIO';
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: var(--bg);
+            padding: 0 15px;
+            font-family: 'Syncopate', sans-serif;
+            font-size: 0.7rem;
+            color: var(--accent);
+            letter-spacing: 0.2em;
+        }
+
+        .bio-box p { margin-bottom: 15px; }
+
+        .press-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .press-item {
+            background: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
+            border: 1px solid #222;
+            aspect-ratio: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .press-item:hover {
+            border-color: var(--accent);
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
+        }
+
+        .press-item img {
+            width: 80%;
+            height: 80%;
+            object-fit: contain;
+            filter: grayscale(1) brightness(0.8);
+            transition: all 0.3s;
+        }
+
+        .press-item:hover img {
+            filter: grayscale(0) brightness(1);
+        }
+
+        .press-item-label {
+            position: absolute;
+            bottom: 15px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--steel);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .press-item:hover .press-item-label {
+            color: var(--accent);
+        }
+
+        .logos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .logo-item {
+            background: #0a0a0a;
+            border: 1px solid #222;
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .logo-item:hover {
+            border-color: var(--accent);
+        }
+
+        .logo-item img {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+            opacity: 0.8;
+            transition: all 0.3s;
+        }
+
+        .logo-item:hover img {
+            opacity: 1;
+            filter: brightness(0) invert(1) drop-shadow(0 0 10px var(--accent));
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            font-family: 'Syncopate', sans-serif;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-right: 15px;
+            margin-bottom: 15px;
+        }
+
+        .download-btn:hover {
+            background: var(--accent);
+            color: #000;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
+            border: 1px solid #222;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .contact-box h3 {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 1rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 20px;
+        }
+
+        .contact-box p {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--steel);
+            margin-bottom: 25px;
+        }
+
+        .contact-email {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 1rem;
+            color: var(--text);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent);
+            padding-bottom: 5px;
+            transition: all 0.3s;
+        }
+
+        .contact-email:hover {
+            color: var(--accent);
+            text-shadow: 0 0 20px var(--accent);
+        }
+
+        footer {
+            padding: 40px 60px;
+            text-align: center;
+            border-top: 1px solid var(--accent);
+            font-size: 0.65rem;
+            font-family: 'Roboto Mono', monospace;
+            color: var(--steel);
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+        }
+
+        footer::before {
+            content: '[ SYSTEM STATUS: ONLINE ]';
+            display: block;
+            margin-bottom: 20px;
+            color: var(--accent);
+            text-shadow: 0 0 10px var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            color: var(--steel);
+            text-decoration: none;
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            transition: all 0.3s;
+            padding: 8px 15px;
+            border: 1px solid transparent;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            nav { padding: 15px 20px; }
+            .nav-links { gap: 12px; }
+            .nav-links a { font-size: 0.55rem; }
+            .hero { padding: 120px 20px 40px; }
+            .hero-title { font-size: 2rem; }
+            section { padding: 40px 20px; }
+            .bio-box { padding: 25px; }
+            .download-btn { width: 100%; margin-right: 0; text-align: center; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cursor" id="cursor"></div>
+    <div class="scanlines"></div>
+
+    <nav>
+        <a href="index.html" class="nav-logo">UNHOLY</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="releases.html">Releases</a>
+            <a href="merch.html">Merch</a>
+            <a href="about.html">About</a>
+            <a href="press.html" class="active">Press</a>
+            <a href="blog/index.html">Blog</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1 class="hero-title">PRESS</h1>
+        <p class="hero-subtitle">Press Kit // Media Resources</p>
+    </section>
+
+    <section>
+        <div class="press-container">
+            <div class="press-section">
+                <h2 class="section-title">BIOGRAPHY</h2>
+                <div class="bio-box">
+                    <p>
+                        UNHOLY DEVOTION is a digital collective from Buenos Aires, Argentina, specializing in 
+                        industrial techno, dark ambient, and experimental electronic music. Formed in 2024, 
+                        the collective consists of sound designers, visual artists, and ritual architects 
+                        who create immersive experiences that blur the line between reality and the digital abyss.
+                    </p>
+                    <p>
+                        With a philosophy of "no genres, no rules," UNHOLY DEVOTION has performed in the most 
+                        exclusive underground venues across Europe and Asia, including Berghain (Berlin), 
+                        Fabric (London), Contact (Tokyo), and De School (Amsterdam).
+                    </p>
+                    <p>
+                        Their discography includes the acclaimed "Genesis IV" EP (2024), the debut album 
+                        "Unholy Devotion" (2024), and multiple singles and remixes. The collective has 
+                        garnered a dedicated following of over 10,000 fans worldwide.
+                    </p>
+                    <p>
+                        For booking, press inquiries, or collaborations, please use the contact information below.
+                    </p>
+                </div>
+                <div style="margin-top: 30px;">
+                    <a href="#" class="download-btn">Download Bio (PDF)</a>
+                    <a href="#" class="download-btn">Download Bio (TXT)</a>
+                </div>
+            </div>
+
+            <div class="press-section">
+                <h2 class="section-title">PRESS PHOTOS</h2>
+                <div class="press-grid">
+                    <div class="press-item">
+                        <img src="COMPLETO/35.jpg" alt="Press Photo 1">
+                        <span class="press-item-label">Live Performance</span>
+                    </div>
+                    <div class="press-item">
+                        <img src="COMPLETO/PORTADA.png" alt="Press Photo 2">
+                        <span class="press-item-label">Portrait</span>
+                    </div>
+                    <div class="press-item">
+                        <img src="COMPLETO/Art 1.png" alt="Press Photo 3">
+                        <span class="press-item-label">Studio</span>
+                    </div>
+                    <div class="press-item">
+                        <img src="COMPLETO/UNHOLY 2.png" alt="Press Photo 4">
+                        <span class="press-item-label">Live</span>
+                    </div>
+                </div>
+                <div style="margin-top: 30px;">
+                    <a href="#" class="download-btn">Download All Photos (ZIP)</a>
+                </div>
+            </div>
+
+            <div class="press-section">
+                <h2 class="section-title">LOGOS</h2>
+                <div class="logos-grid">
+                    <div class="logo-item">
+                        <img src="COMPLETO/LOGO UNHOLY DEVOTION 2024.png" alt="UNHOLY Logo">
+                    </div>
+                    <div class="logo-item">
+                        <img src="COMPLETO/LOGO UNHOLY DEVOTION 2024.png" alt="UNHOLY Logo White">
+                    </div>
+                    <div class="logo-item" style="background: #fff;">
+                        <img src="COMPLETO/LOGO UNHOLY DEVOTION 2024.png" alt="UNHOLY Logo Black" style="filter: brightness(0);">
+                    </div>
+                </div>
+                <div style="margin-top: 30px;">
+                    <a href="#" class="download-btn">Download Logo Pack (ZIP)</a>
+                </div>
+            </div>
+
+            <div class="press-section">
+                <h2 class="section-title">COVERAGE</h2>
+                <div class="bio-box">
+                    <p style="margin-bottom: 20px; color: var(--text);">
+                        <strong style="color: var(--accent);">//</strong> "The most intense live experience I've witnessed. UNHOLY DEVOTION redefines what industrial techno can be. Absolute destruction."
+                        <br><span style="color: #555;">— DJ VENOM</span>
+                    </p>
+                    <p style="margin-bottom: 20px; color: var(--text);">
+                        <strong style="color: var(--accent);">//</strong> "Their visual production is unmatched. Every show is a journey into the abyss."
+                        <br><span style="color: #555;">— SARA CHEN, Resident Advisor</span>
+                    </p>
+                    <p style="color: var(--text);">
+                        <strong style="color: var(--accent);">//</strong> "Pure sonic warfare. This is what underground techno should sound like."
+                        <br><span style="color: #555;">— ANONIMO OSCURO</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="press-section">
+                <h2 class="section-title">CONTACT</h2>
+                <div class="contact-box">
+                    <h3>Media Inquiries</h3>
+                    <p>For press, interviews, reviews, and promotional materials, please contact:</p>
+                    <a href="mailto:press@unholydevotion.com" class="contact-email">press@unholydevotion.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://instagram.com/unholydevotion" target="_blank">INSTAGRAM</a>
+            <a href="https://twitter.com/unholydevotion" target="_blank">TWITTER</a>
+            <a href="https://soundcloud.com/unholydevotion" target="_blank">SOUNDCLOUD</a>
+            <a href="https://youtube.com/@unholydevotion" target="_blank">YOUTUBE</a>
+            <a href="https://spotify.com/artist/unholydevotion" target="_blank">SPOTIFY</a>
+        </div>
+        <p>&copy; 2026 UNHOLY DEVOTION. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script>
+        const cursor = document.getElementById('cursor');
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (!prefersReducedMotion) {
+            let mouseX = 0, mouseY = 0;
+            let cursorX = 0, cursorY = 0;
+
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+
+            function animateCursor() {
+                cursorX += (mouseX - cursorX) * 0.2;
+                cursorY += (mouseY - cursorY) * 0.2;
+                cursor.style.left = cursorX - 6 + 'px';
+                cursor.style.top = cursorY - 6 + 'px';
+                requestAnimationFrame(animateCursor);
+            }
+            animateCursor();
+
+            const interactiveElements = document.querySelectorAll('a, button');
+            interactiveElements.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursor.style.transform = 'scale(2)';
+                    cursor.style.background = '#00ff41';
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursor.style.transform = 'scale(1)';
+                    cursor.style.background = '#ff0000';
+                });
+            });
+        } else {
+            cursor.style.display = 'none';
+        }
+
+        window.addEventListener('scroll', () => {
+            document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+</body>
+</html>

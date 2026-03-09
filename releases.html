@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RELEASES | UNHOLY DEVOTION</title>
+    
+    <meta name="description" content="UNHOLY DEVOTION official releases. EPs, LPs, Singles and remixes. Dark industrial techno from Buenos Aires.">
+    <meta name="keywords" content="UNHOLY, DEVOTION, techno, industrial, releases, EP, LP, album, music">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="RELEASES | UNHOLY DEVOTION">
+    <meta property="og:description" content="Official discography. Download on all platforms.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" type="image/svg+xml">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Work+Sans:wght@200;400;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --bg: #000000;
+            --accent: #ff0000;
+            --accent-glow: #ff0000;
+            --text: #E5E5E5;
+            --steel: #888888;
+            --glass: rgba(255, 255, 255, 0.03);
+            --metal: #1a1a1a;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+            html { scroll-behavior: auto; }
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Work Sans', 'Roboto Mono', monospace;
+            overflow-x: hidden;
+            letter-spacing: -0.02em;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 9996;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        }
+
+        .cursor {
+            width: 12px; height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            box-shadow: 0 0 10px var(--accent), 0 0 30px var(--accent);
+            transition: transform 0.1s ease;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 9997;
+            background: repeating-linear-gradient(0deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 1px, transparent 1px, transparent 3px);
+            opacity: 0.3;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 25px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: transparent;
+        }
+
+        nav.scrolled {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 15px 40px;
+        }
+
+        .nav-logo {
+            font-family: 'Syncopate', system-ui;
+            font-size: 0.8rem;
+            color: var(--accent);
+            text-decoration: none;
+            letter-spacing: 0.2em;
+            text-shadow: 0 0 10px var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.7rem;
+            font-family: 'Syncopate', system-ui;
+            transition: all 0.3s;
+            letter-spacing: 0.15em;
+            opacity: 0.8;
+            padding: 8px 12px;
+            border: 1px solid transparent;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+            opacity: 1;
+        }
+
+        .hero {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 150px 50px 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-title {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 4vw;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: var(--accent);
+            text-shadow: 0 0 30px rgba(255, 0, 0, 0.5), 0 0 60px rgba(255, 0, 0, 0.3);
+            margin-bottom: 20px;
+            animation: glitchText 3s infinite;
+        }
+
+        @keyframes glitchText {
+            0%, 90%, 100% { text-shadow: 0 0 30px rgba(255, 0, 0, 0.5); }
+            92% { text-shadow: -3px 0 #00ff41, 3px 0 #ff0000; }
+            94% { text-shadow: 3px 0 #00ff41, -3px 0 #ff0000; }
+        }
+
+        .hero-subtitle {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--steel);
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 1.5rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            margin-bottom: 50px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--accent);
+            display: inline-block;
+            position: relative;
+        }
+
+        .section-title::before {
+            content: '//';
+            color: var(--accent);
+            margin-right: 10px;
+        }
+
+        section {
+            min-height: 100vh;
+            padding: 80px 50px 100px;
+            background: var(--bg);
+        }
+
+        .releases-filter {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 1px solid #333;
+            color: var(--steel);
+            padding: 12px 30px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.7rem;
+            cursor: none;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            border-color: var(--accent);
+            color: var(--accent);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+        }
+
+        .releases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .release-card {
+            background: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
+            border: 1px solid #222;
+            padding: 0;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .release-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), transparent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s;
+            z-index: 2;
+        }
+
+        .release-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .release-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 0 40px rgba(255, 0, 0, 0.2), 0 20px 40px rgba(0,0,0,0.5);
+            transform: translateY(-5px);
+        }
+
+        .release-cover {
+            position: relative;
+            aspect-ratio: 1;
+            overflow: hidden;
+            border-bottom: 1px solid #222;
+        }
+
+        .release-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(1) contrast(1.1) brightness(0.8);
+            transition: all 0.5s;
+        }
+
+        .release-card:hover .release-cover img {
+            filter: grayscale(0) contrast(1) brightness(1);
+            transform: scale(1.05);
+        }
+
+        .release-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 50%);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .release-card:hover .release-overlay {
+            opacity: 1;
+        }
+
+        .play-preview {
+            width: 60px;
+            height: 60px;
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            background: rgba(0,0,0,0.7);
+            cursor: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .play-preview::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 18px solid var(--accent);
+            border-top: 11px solid transparent;
+            border-bottom: 11px solid transparent;
+            margin-left: 5px;
+            transition: all 0.3s;
+        }
+
+        .play-preview:hover {
+            background: var(--accent);
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+        }
+
+        .play-preview:hover::before {
+            border-left-color: #000;
+        }
+
+        .release-info {
+            padding: 25px;
+        }
+
+        .release-type {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 8px;
+        }
+
+        .release-title {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 1rem;
+            color: var(--text);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+        }
+
+        .release-year {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--steel);
+            margin-bottom: 15px;
+        }
+
+        .release-tracklist {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.65rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .release-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .release-link {
+            padding: 8px 15px;
+            border: 1px solid #333;
+            color: var(--steel);
+            text-decoration: none;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.3s;
+        }
+
+        .release-link:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+        }
+
+        footer {
+            padding: 40px 60px;
+            text-align: center;
+            border-top: 1px solid var(--accent);
+            font-size: 0.65rem;
+            font-family: 'Roboto Mono', monospace;
+            color: var(--steel);
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+        }
+
+        footer::before {
+            content: '[ SYSTEM STATUS: ONLINE ]';
+            display: block;
+            margin-bottom: 20px;
+            color: var(--accent);
+            text-shadow: 0 0 10px var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            color: var(--steel);
+            text-decoration: none;
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            transition: all 0.3s;
+            padding: 8px 15px;
+            border: 1px solid transparent;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+            text-shadow: 0 0 10px var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            nav { padding: 15px 20px; }
+            .nav-links { gap: 15px; }
+            .nav-links a { font-size: 0.6rem; padding: 6px 8px; }
+            .hero { padding: 120px 20px 60px; }
+            .hero-title { font-size: 2rem; }
+            section { padding: 60px 20px; }
+            .releases-grid { grid-template-columns: 1fr; gap: 30px; }
+            .release-links { justify-content: center; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cursor" id="cursor"></div>
+    <div class="scanlines"></div>
+
+    <nav>
+        <a href="index.html" class="nav-logo">UNHOLY</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="releases.html" class="active">Releases</a>
+            <a href="merch.html">Merch</a>
+            <a href="about.html">About</a>
+            <a href="press.html">Press</a>
+            <a href="blog/index.html">Blog</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1 class="hero-title">DISCOGRAPHY</h1>
+        <p class="hero-subtitle">Official Releases // EPs // LPs // Singles</p>
+    </section>
+
+    <section>
+        <div style="text-align: center;">
+            <h2 class="section-title">CATALOG</h2>
+            
+            <div class="releases-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ep">EPs</button>
+                <button class="filter-btn" data-filter="lp">LPs</button>
+                <button class="filter-btn" data-filter="single">Singles</button>
+                <button class="filter-btn" data-filter="remix">Remixes</button>
+            </div>
+
+            <div class="releases-grid">
+                <article class="release-card" data-type="ep">
+                    <div class="release-cover">
+                        <img src="COMPLETO/35.jpg" alt="Genesis IV Cover">
+                        <div class="release-overlay">
+                            <button class="play-preview" aria-label="Play preview"></button>
+                        </div>
+                    </div>
+                    <div class="release-info">
+                        <span class="release-type">EP // 2024</span>
+                        <h3 class="release-title">Genesis IV</h3>
+                        <p class="release-year">Released: November 2024</p>
+                        <div class="release-tracklist">
+                            01. Genesis IV (Original Mix)<br>
+                            02. Dogma (Original Mix)<br>
+                            03. System Failure<br>
+                            04. Genesis IV (Remix)
+                        </div>
+                        <div class="release-links">
+                            <a href="https://soundcloud.com/unholydevotion" target="_blank" class="release-link">SoundCloud</a>
+                            <a href="https://spotify.com" target="_blank" class="release-link">Spotify</a>
+                            <a href="https://bandcamp.com" target="_blank" class="release-link">Bandcamp</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="release-card" data-type="lp">
+                    <div class="release-cover">
+                        <img src="COMPLETO/UNHOLY 2.png" alt="Unholy Devotion Cover">
+                        <div class="release-overlay">
+                            <button class="play-preview" aria-label="Play preview"></button>
+                        </div>
+                    </div>
+                    <div class="release-info">
+                        <span class="release-type">LP // 2024</span>
+                        <h3 class="release-title">Unholy Devotion</h3>
+                        <p class="release-year">Released: August 2024</p>
+                        <div class="release-tracklist">
+                            01. Awakening<br>
+                            02. Dark Matter<br>
+                            03. Industrial Dreams<br>
+                            04. Chaos Theory<br>
+                            05. Void Protocol<br>
+                            06. Salvation (Final)
+                        </div>
+                        <div class="release-links">
+                            <a href="https://soundcloud.com/unholydevotion" target="_blank" class="release-link">SoundCloud</a>
+                            <a href="https://spotify.com" target="_blank" class="release-link">Spotify</a>
+                            <a href="https://bandcamp.com" target="_blank" class="release-link">Bandcamp</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="release-card" data-type="single">
+                    <div class="release-cover">
+                        <img src="COMPLETO/Art 1.png" alt="Hardware Set Cover">
+                        <div class="release-overlay">
+                            <button class="play-preview" aria-label="Play preview"></button>
+                        </div>
+                    </div>
+                    <div class="release-info">
+                        <span class="release-type">SINGLE // 2025</span>
+                        <h3 class="release-title">Hardware Set</h3>
+                        <p class="release-year">Released: January 2025</p>
+                        <div class="release-tracklist">
+                            01. Hardware Set (Radio Edit)<br>
+                            02. Hardware Set (Extended)<br>
+                            03. Hardware Set (Instrumental)
+                        </div>
+                        <div class="release-links">
+                            <a href="https://soundcloud.com/unholydevotion" target="_blank" class="release-link">SoundCloud</a>
+                            <a href="https://spotify.com" target="_blank" class="release-link">Spotify</a>
+                            <a href="https://bandcamp.com" target="_blank" class="release-link">Bandcamp</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="release-card" data-type="ep">
+                    <div class="release-cover">
+                        <img src="COMPLETO/EXPERIMENT 2.png" alt="Experiment Cover">
+                        <div class="release-overlay">
+                            <button class="play-preview" aria-label="Play preview"></button>
+                        </div>
+                    </div>
+                    <div class="release-info">
+                        <span class="release-type">EP // 2025</span>
+                        <h3 class="release-title">Experiment #02</h3>
+                        <p class="release-year">Released: February 2025</p>
+                        <div class="release-tracklist">
+                            01. Neural Link<br>
+                            02. Signal Lost<br>
+                            03. Re:Pattern<br>
+                            04. Static Void
+                        </div>
+                        <div class="release-links">
+                            <a href="https://soundcloud.com/unholydevotion" target="_blank" class="release-link">SoundCloud</a>
+                            <a href="https://spotify.com" target="_blank" class="release-link">Spotify</a>
+                            <a href="https://bandcamp.com" target="_blank" class="release-link">Bandcamp</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="release-card" data-type="remix">
+                    <div class="release-cover">
+                        <img src="COMPLETO/PORTADA.png" alt="Remixes Cover">
+                        <div class="release-overlay">
+                            <button class="play-preview" aria-label="Play preview"></button>
+                        </div>
+                    </div>
+                    <div class="release-info">
+                        <span class="release-type">REMIXES // 2025</span>
+                        <h3 class="release-title">Remixes Vol.1</h3>
+                        <p class="release-year">Released: March 2025</p>
+                        <div class="release-tracklist">
+                            01. Artist A - Track (UNHOLY Remix)<br>
+                            02. Artist B - Track (UNHOLY Remix)<br>
+                            03. Artist C - Track (UNHOLY Remix)
+                        </div>
+                        <div class="release-links">
+                            <a href="https://soundcloud.com/unholydevotion" target="_blank" class="release-link">SoundCloud</a>
+                            <a href="https://spotify.com" target="_blank" class="release-link">Spotify</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="release-card" data-type="single">
+                    <div class="release-cover">
+                        <img src="COMPLETO/PORTADA2.png" alt="Upcoming Cover">
+                        <div class="release-overlay">
+                            <button class="play-preview" aria-label="Play preview"></button>
+                        </div>
+                    </div>
+                    <div class="release-info">
+                        <span class="release-type">COMING SOON</span>
+                        <h3 class="release-title">TBA</h3>
+                        <p class="release-year">2026</p>
+                        <div class="release-tracklist">
+                            New material coming soon.<br>
+                            Stay tuned for updates.
+                        </div>
+                        <div class="release-links">
+                            <a href="https://instagram.com/unholydevotion" target="_blank" class="release-link">Follow</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://instagram.com/unholydevotion" target="_blank">INSTAGRAM</a>
+            <a href="https://twitter.com/unholydevotion" target="_blank">TWITTER</a>
+            <a href="https://soundcloud.com/unholydevotion" target="_blank">SOUNDCLOUD</a>
+            <a href="https://youtube.com/@unholydevotion" target="_blank">YOUTUBE</a>
+            <a href="https://spotify.com/artist/unholydevotion" target="_blank">SPOTIFY</a>
+        </div>
+        <p>&copy; 2026 UNHOLY DEVOTION. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script>
+        const cursor = document.getElementById('cursor');
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (!prefersReducedMotion) {
+            let mouseX = 0, mouseY = 0;
+            let cursorX = 0, cursorY = 0;
+
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+
+            function animateCursor() {
+                cursorX += (mouseX - cursorX) * 0.2;
+                cursorY += (mouseY - cursorY) * 0.2;
+                cursor.style.left = cursorX - 6 + 'px';
+                cursor.style.top = cursorY - 6 + 'px';
+                requestAnimationFrame(animateCursor);
+            }
+            animateCursor();
+
+            const interactiveElements = document.querySelectorAll('a, button, .release-card');
+            interactiveElements.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursor.style.transform = 'scale(2)';
+                    cursor.style.background = '#00ff41';
+                    cursor.style.boxShadow = '0 0 20px #00ff41';
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursor.style.transform = 'scale(1)';
+                    cursor.style.background = '#ff0000';
+                    cursor.style.boxShadow = '0 0 10px #ff0000, 0 0 30px #ff0000';
+                });
+            });
+        } else {
+            cursor.style.display = 'none';
+        }
+
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const releaseCards = document.querySelectorAll('.release-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+
+                releaseCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.type === filter) {
+                        card.style.display = 'block';
+                        setTimeout(() => card.style.opacity = '1', 10);
+                    } else {
+                        card.style.opacity = '0';
+                        setTimeout(() => card.style.display = 'none', 300);
+                    }
+                });
+            });
+        });
+
+        document.querySelectorAll('.play-preview').forEach(btn => {
+            btn.addEventListener('click', () => {
+                alert('Audio preview would play here');
+            });
+        });
+    </script>
+</body>
+</html>

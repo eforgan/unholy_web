@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT | UNHOLY DEVOTION</title>
+    
+    <meta name="description" content="UNHOLY DEVOTION - Digital collective from Buenos Aires. Industrial techno, dark ambient, experimental electronic music.">
+    <meta name="keywords" content="UNHOLY, DEVOTION, about, bio, biography, industrial, techno, Buenos Aires">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="ABOUT | UNHOLY DEVOTION">
+    <meta property="og:description" content="Learn about UNHOLY DEVOTION - the digital collective redefining industrial techno.">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Work+Sans:wght@200;400;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #000000;
+            --accent: #ff0000;
+            --text: #E5E5E5;
+            --steel: #888888;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
+        html { scroll-behavior: smooth; }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Work Sans', 'Roboto Mono', monospace;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 9996;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        }
+
+        .cursor {
+            width: 12px; height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            box-shadow: 0 0 10px var(--accent), 0 0 30px var(--accent);
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 9997;
+            background: repeating-linear-gradient(0deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 1px, transparent 1px, transparent 3px);
+            opacity: 0.3;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 25px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: transparent;
+        }
+
+        nav.scrolled { background: rgba(0, 0, 0, 0.9); padding: 15px 40px; }
+
+        .nav-logo {
+            font-family: 'Syncopate', system-ui;
+            font-size: 0.8rem;
+            color: var(--accent);
+            text-decoration: none;
+            letter-spacing: 0.2em;
+            text-shadow: 0 0 10px var(--accent);
+        }
+
+        .nav-links { display: flex; gap: 30px; }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.7rem;
+            font-family: 'Syncopate', system-ui;
+            transition: all 0.3s;
+            letter-spacing: 0.15em;
+            opacity: 0.8;
+            padding: 8px 12px;
+            border: 1px solid transparent;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+            opacity: 1;
+        }
+
+        .hero {
+            min-height: 50vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 150px 50px 60px;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 4vw;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: var(--accent);
+            text-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--steel);
+            letter-spacing: 0.3em;
+        }
+
+        section { padding: 60px 50px 100px; background: var(--bg); }
+
+        .section-title {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 1.5rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            margin-bottom: 50px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--accent);
+            display: inline-block;
+        }
+
+        .section-title::before { content: '//'; margin-right: 10px; }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .about-image {
+            position: relative;
+            aspect-ratio: 3/4;
+            overflow: hidden;
+            border: 1px solid #222;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(1) contrast(1.1);
+            transition: all 0.5s;
+        }
+
+        .about-image:hover img {
+            filter: grayscale(0) contrast(1);
+            transform: scale(1.03);
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255,0,0,0.1) 0%, transparent 50%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .about-content {
+            padding: 20px 0;
+        }
+
+        .about-lead {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 1rem;
+            color: var(--text);
+            line-height: 2;
+            margin-bottom: 30px;
+            border-left: 2px solid var(--accent);
+            padding-left: 20px;
+        }
+
+        .about-text {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--steel);
+            line-height: 2;
+            margin-bottom: 20px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+            padding-top: 40px;
+            border-top: 1px solid #222;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 2.5rem;
+            color: var(--accent);
+            display: block;
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+        }
+
+        .stat-label {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--steel);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-top: 10px;
+        }
+
+        .timeline-section {
+            margin-top: 80px;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--accent), #222);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -44px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            background: var(--accent);
+            border-radius: 50%;
+            box-shadow: 0 0 15px var(--accent);
+        }
+
+        .timeline-year {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 1rem;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        .timeline-title {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+
+        .timeline-desc {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--steel);
+            line-height: 1.8;
+        }
+
+        .gear-section {
+            margin-top: 80px;
+        }
+
+        .gear-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gear-item {
+            background: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
+            border: 1px solid #222;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .gear-item:hover {
+            border-color: var(--accent);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
+        }
+
+        .gear-name {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 0.75rem;
+            color: var(--text);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 5px;
+        }
+
+        .gear-type {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.6rem;
+            color: var(--steel);
+        }
+
+        footer {
+            padding: 40px 60px;
+            text-align: center;
+            border-top: 1px solid var(--accent);
+            font-size: 0.65rem;
+            font-family: 'Roboto Mono', monospace;
+            color: var(--steel);
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+        }
+
+        footer::before {
+            content: '[ SYSTEM STATUS: ONLINE ]';
+            display: block;
+            margin-bottom: 20px;
+            color: var(--accent);
+            text-shadow: 0 0 10px var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            color: var(--steel);
+            text-decoration: none;
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            transition: all 0.3s;
+            padding: 8px 15px;
+            border: 1px solid transparent;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        @media (max-width: 900px) {
+            .about-container { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            nav { padding: 15px 20px; }
+            .nav-links { gap: 12px; }
+            .nav-links a { font-size: 0.55rem; }
+            .hero { padding: 120px 20px 40px; }
+            .hero-title { font-size: 2rem; }
+            section { padding: 40px 20px; }
+            .stats-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cursor" id="cursor"></div>
+    <div class="scanlines"></div>
+
+    <nav>
+        <a href="index.html" class="nav-logo">UNHOLY</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="releases.html">Releases</a>
+            <a href="merch.html">Merch</a>
+            <a href="about.html" class="active">About</a>
+            <a href="press.html">Press</a>
+            <a href="blog/index.html">Blog</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1 class="hero-title">ABOUT</h1>
+        <p class="hero-subtitle">Origin Story // Philosophy // Equipment</p>
+    </section>
+
+    <section>
+        <div class="about-container">
+            <div class="about-image">
+                <img src="COMPLETO/FOTO UNO.png" alt="UNHOLY DEVOTION">
+            </div>
+            <div class="about-content">
+                <h2 class="section-title">WHO WE ARE</h2>
+                
+                <p class="about-lead">
+                    Emerged from the underground in 2024. Born in darkness, raised by chaos. 
+                    UNHOLY DEVOTION is a digital collective that transcends genres and defies conventions.
+                </p>
+                
+                <p class="about-text">
+                    Based in the shadows of Buenos Aires, we are sound designers, visual artists, 
+                    and ritual architects creating experiences that blur the line between reality 
+                    and the digital abyss. Our philosophy is simple: no genres. No rules. Only 
+                    devotion to the craft.
+                </p>
+                
+                <p class="about-text">
+                    We have performed in the most exclusive underground venues across Europe and Asia, 
+                    bringing our unique blend of industrial techno, dark ambient, and experimental 
+                    noise to audiences worldwide. Every performance is a ritual, every track a prayer 
+                    to the void.
+                </p>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Live Shows</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">Countries</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">Releases</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Followers</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-section">
+            <h2 class="section-title">TIMELINE</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-year">2024</span>
+                    <h3 class="timeline-title">Formation</h3>
+                    <p class="timeline-desc">UNHOLY DEVOTION emerges from the underground. First release "Genesis IV" EP establishes our sound.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <span class="timeline-year">2024</span>
+                    <h3 class="timeline-title">Europe Debut Tour</h3>
+                    <p class="timeline-desc">First European tour including Berghain, Fabric, and De School. Critical acclaim follows.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <span class="timeline-year">2025</span>
+                    <h3 class="timeline-title">"Unholy Devotion" LP</h3>
+                    <p class="timeline-desc">Debut album released. Features collaborations with international artists.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <span class="timeline-year">2025</span>
+                    <h3 class="timeline-title">Asia Expansion</h3>
+                    <p class="timeline-desc">First Asia tour including Tokyo, Seoul, and Singapore. Growing global presence.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <span class="timeline-year">2026</span>
+                    <h3 class="timeline-title">World Tour</h3>
+                    <p class="timeline-desc">Our most ambitious tour yet. 20+ cities across 4 continents.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="gear-section">
+            <h2 class="section-title">EQUIPMENT</h2>
+            
+            <div class="gear-grid">
+                <div class="gear-item">
+                    <span class="gear-name">Roland TR-808</span>
+                    <span class="gear-type">Drum Machine</span>
+                </div>
+                <div class="gear-item">
+                    <span class="gear-name">Moog Subsequent 37</span>
+                    <span class="gear-type">Synthesizer</span>
+                </div>
+                <div class="gear-item">
+                    <span class="gear-name">Elektron Octatrack</span>
+                    <span class="gear-type">Sampler/Sequencer</span>
+                </div>
+                <div class="gear-item">
+                    <span class="gear-name">Korg MS-20</span>
+                    <span class="gear-type">Synthesizer</span>
+                </div>
+                <div class="gear-item">
+                    <span class="gear-name">Native Instruments</span>
+                    <span class="gear-type">Traktor S4</span>
+                </div>
+                <div class="gear-item">
+                    <span class="gear-name">Teenage Engineering</span>
+                    <span class="gear-type">OP-1</span>
+                </div>
+                <div class="gear-item">
+                    <span class="gear-name">Pioneer DJ</span>
+                    <span class="gear-type">CDJ-3000</span>
+                </div>
+                <div class="gear-item">
+                    <span class="gear-name">Modular</span>
+                    <span class="gear-type">Eurorack System</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://instagram.com/unholydevotion" target="_blank">INSTAGRAM</a>
+            <a href="https://twitter.com/unholydevotion" target="_blank">TWITTER</a>
+            <a href="https://soundcloud.com/unholydevotion" target="_blank">SOUNDCLOUD</a>
+            <a href="https://youtube.com/@unholydevotion" target="_blank">YOUTUBE</a>
+            <a href="https://spotify.com/artist/unholydevotion" target="_blank">SPOTIFY</a>
+        </div>
+        <p>&copy; 2026 UNHOLY DEVOTION. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script>
+        const cursor = document.getElementById('cursor');
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (!prefersReducedMotion) {
+            let mouseX = 0, mouseY = 0;
+            let cursorX = 0, cursorY = 0;
+
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+
+            function animateCursor() {
+                cursorX += (mouseX - cursorX) * 0.2;
+                cursorY += (mouseY - cursorY) * 0.2;
+                cursor.style.left = cursorX - 6 + 'px';
+                cursor.style.top = cursorY - 6 + 'px';
+                requestAnimationFrame(animateCursor);
+            }
+            animateCursor();
+
+            const interactiveElements = document.querySelectorAll('a, button');
+            interactiveElements.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursor.style.transform = 'scale(2)';
+                    cursor.style.background = '#00ff41';
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursor.style.transform = 'scale(1)';
+                    cursor.style.background = '#ff0000';
+                });
+            });
+        } else {
+            cursor.style.display = 'none';
+        }
+
+        window.addEventListener('scroll', () => {
+            document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+</body>
+</html>

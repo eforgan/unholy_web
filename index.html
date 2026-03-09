@@ -232,13 +232,13 @@
 
         @media (max-width: 768px) {
             nav {
-                padding: 12px 15px 12px 80px;
+                padding: 10px 20px;
+                background: rgba(0, 0, 0, 0.5);
             }
 
             .hero-vertical-text {
-                left: 15px;
-                font-size: 0.9rem;
-                top: 30%;
+                display: none;
+                /* Already hidden at 900px, but extra safety */
             }
 
             .nav-links {
@@ -275,11 +275,11 @@
     <div class="scanlines"></div>
 
     <nav>
-        <div class="hamburger" id="hamburger">
+        <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">
             <span></span>
             <span></span>
             <span></span>
-        </div>
+        </button>
         <div class="nav-links" id="navLinks">
             <a href="index.html" class="active">Home</a>
             <a href="bio.html">Bio</a>
@@ -301,7 +301,7 @@
         <div class="hero-vertical-text">UNHOLY DEVOTION</div>
 
         <div class="hero-content">
-            <img src="COMPLETO/LOGO UNHOLY DEVOTION 2024.png" alt="UNHOLY DEVOTION" class="hero-logo">
+            <img src="COMPLETO/LOGO UNHOLY DEVOTION 2024.png" alt="UNHOLY DEVOTION" class="hero-logo" loading="lazy">
             <h1 class="hero-title">UNHOLY DEVOTION</h1>
             <p class="hero-subtitle">Built on Chaos // Refined by Precision</p>
 

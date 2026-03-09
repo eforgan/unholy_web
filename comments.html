@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMMENTS | UNHOLY DEVOTION</title>
+    
+    <meta name="description" content="UNHOLY DEVOTION testimonials and comments from fans.">
+    <meta name="keywords" content="UNHOLY, DEVOTION, comments, testimonials, reviews">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Work+Sans:wght@200;400;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #000000;
+            --accent: #ff0000;
+            --text: #E5E5E5;
+            --steel: #888888;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Work Sans', 'Roboto Mono', monospace;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 9996;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 9997;
+            background: repeating-linear-gradient(0deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 1px, transparent 1px, transparent 3px);
+            opacity: 0.3;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            background: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.65rem;
+            font-family: 'Syncopate', system-ui;
+            transition: all 0.3s;
+            letter-spacing: 0.15em;
+            padding: 8px 12px;
+            border: 1px solid transparent;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+        }
+
+        .hero {
+            min-height: 40vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 50px 50px;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: var(--accent);
+            text-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+        }
+
+        section {
+            padding: 50px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 1.5rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            margin-bottom: 40px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--accent);
+            display: inline-block;
+        }
+
+        .section-title::before { content: '// '; }
+
+        .comment-form {
+            background: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
+            border: 1px solid #222;
+            padding: 40px;
+            margin-bottom: 50px;
+        }
+
+        .comment-form h3 {
+            margin-bottom: 30px;
+            color: var(--accent);
+            font-size: 1rem;
+        }
+
+        .comment-form input,
+        .comment-form textarea {
+            width: 100%;
+            background: #0a0a0a;
+            border: 1px solid #222;
+            color: var(--text);
+            padding: 15px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.75rem;
+            margin-bottom: 15px;
+            transition: all 0.3s;
+        }
+
+        .comment-form input:focus,
+        .comment-form textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+        }
+
+        .rating {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .rating input { display: none; }
+
+        .rating label {
+            font-size: 1.5rem;
+            color: #333;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .rating label:hover,
+        .rating input:checked ~ label,
+        .rating label:hover ~ label {
+            color: var(--accent);
+        }
+
+        .submit-btn {
+            background: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            padding: 15px 40px;
+            font-family: 'Syncopate', sans-serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.3em;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+        }
+
+        .submit-btn:hover {
+            background: var(--accent);
+            color: #000;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+        }
+
+        .comments-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .comment-item {
+            background: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
+            border: 1px solid #1a1a1a;
+            padding: 25px;
+        }
+
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .comment-author {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 0.8rem;
+            color: var(--text);
+        }
+
+        .comment-date {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.6rem;
+            color: #444;
+        }
+
+        .comment-stars {
+            color: var(--accent);
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+
+        .comment-text {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--steel);
+            line-height: 1.8;
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid var(--accent);
+            font-size: 0.65rem;
+            font-family: 'Roboto Mono', monospace;
+            color: var(--steel);
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+        }
+
+        footer::before {
+            content: '[ SYSTEM STATUS: ONLINE ]';
+            display: block;
+            margin-bottom: 20px;
+            color: var(--accent);
+            text-shadow: 0 0 10px var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            color: var(--steel);
+            text-decoration: none;
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            transition: all 0.3s;
+            padding: 8px 15px;
+            border: 1px solid transparent;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            nav { padding: 12px 15px; }
+            .nav-links { gap: 10px; }
+            .nav-links a { font-size: 0.5rem; padding: 6px 8px; }
+            .hero { padding: 80px 20px 30px; }
+            .hero-title { font-size: 1.8rem; }
+            section { padding: 30px 20px; }
+            .comment-form { padding: 20px; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="scanlines"></div>
+
+    <nav>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="bio.html">Bio</a>
+            <a href="media.html">Media</a>
+            <a href="sets.html">Sets</a>
+            <a href="tour.html">Tour</a>
+            <a href="releases.html">Releases</a>
+            <a href="merch.html">Merch</a>
+            <a href="about.html">About</a>
+            <a href="press.html">Press</a>
+            <a href="blog/index.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1 class="hero-title">COMMENTS</h1>
+    </section>
+
+    <section>
+        <h2 class="section-title">TESTIMONIALS</h2>
+        
+        <div class="comment-form">
+            <h3>Leave Your Message</h3>
+            <div class="rating">
+                <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+            </div>
+            <input type="text" placeholder="[ YOUR NAME ]" required>
+            <input type="email" placeholder="[ YOUR EMAIL ]" required>
+            <textarea placeholder="[ YOUR MESSAGE ]" required></textarea>
+            <button type="submit" class="submit-btn">Transmit Message</button>
+        </div>
+
+        <div class="comments-list">
+            <div class="comment-item">
+                <div class="comment-header">
+                    <span class="comment-author">DJ VENOM</span>
+                    <span class="comment-date">2024.12.15</span>
+                </div>
+                <div class="comment-stars">★★★★★</div>
+                <p class="comment-text">The most intense live experience I've witnessed. UNHOLY DEVOTION redefines what industrial techno can be. Absolute destruction.</p>
+            </div>
+
+            <div class="comment-item">
+                <div class="comment-header">
+                    <span class="comment-author">SARA CHEN</span>
+                    <span class="comment-date">2024.11.28</span>
+                </div>
+                <div class="comment-stars">★★★★★</div>
+                <p class="comment-text">Their visual production is unmatched. Every show is a journey into the abyss. Cannot wait for the next ritual.</p>
+            </div>
+
+            <div class="comment-item">
+                <div class="comment-header">
+                    <span class="comment-author">MARCUS NOIR</span>
+                    <span class="comment-date">2024.10.05</span>
+                </div>
+                <div class="comment-stars">★★★★☆</div>
+                <p class="comment-text">Caught them in Berlin. The energy was incredible. Sound design is top notch. Highly recommended for fans of the darker side.</p>
+            </div>
+
+            <div class="comment-item">
+                <div class="comment-header">
+                    <span class="comment-author">ANONIMO OSCURO</span>
+                    <span class="comment-date">2024.09.20</span>
+                </div>
+                <div class="comment-stars">★★★★★</div>
+                <p class="comment-text">Pure sonic warfare. This is what underground techno should sound like. No compromise, no mainstream bs.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://instagram.com/unholydevotion" target="_blank">INSTAGRAM</a>
+            <a href="https://twitter.com/unholydevotion" target="_blank">TWITTER</a>
+            <a href="https://soundcloud.com/unholydevotion" target="_blank">SOUNDCLOUD</a>
+            <a href="https://youtube.com/@unholydevotion" target="_blank">YOUTUBE</a>
+            <a href="https://spotify.com/artist/unholydevotion" target="_blank">SPOTIFY</a>
+        </div>
+        <p>&copy; 2026 UNHOLY DEVOTION. ALL RIGHTS RESERVED.</p>
+    </footer>
+</body>
+</html>

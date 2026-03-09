@@ -132,6 +132,42 @@
             z-index: 0;
         }
 
+        .hero-vertical-text {
+            position: absolute;
+            left: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: 'Syncopate', sans-serif;
+            font-size: 1.2vw;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: var(--accent);
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
+            white-space: nowrap;
+            animation: laserGlow 2s ease-in-out infinite alternate;
+            text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 80px #ff0000;
+            z-index: 10;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        @keyframes laserGlow {
+            0% { 
+                text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff0000;
+                filter: brightness(1);
+            }
+            50% { 
+                text-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 80px #ff0000, 0 0 120px #ff0000;
+                filter: brightness(1.5);
+            }
+            100% { 
+                text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff0000;
+                filter: brightness(1);
+            }
+        }
+
         .hero-content {
             position: relative;
             z-index: 10;
@@ -275,6 +311,8 @@
 
     <section class="hero">
         <video src="COMPLETO/optimized/1.mp4" autoplay loop muted playsinline></video>
+        
+        <div class="hero-vertical-text">UNHOLY DEVOTION</div>
         
         <div class="hero-content">
             <img src="COMPLETO/LOGO UNHOLY DEVOTION 2024.png" alt="UNHOLY DEVOTION" class="hero-logo">

@@ -5,110 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BLOG | UNHOLY DEVOTION</title>
-    
+
     <meta name="description" content="UNHOLY DEVOTION news, updates, behind the scenes and artist interviews.">
     <meta name="keywords" content="UNHOLY, DEVOTION, news, blog, updates, behind the scenes, interview">
     <meta name="robots" content="index, follow">
-    
+
     <meta property="og:title" content="BLOG | UNHOLY DEVOTION">
     <meta property="og:description" content="Latest news and updates from UNHOLY DEVOTION.">
     <meta property="og:type" content="website">
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" type="image/svg+xml">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Work+Sans:wght@200;400;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"
+        type="image/svg+xml">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Syncopate:wght@400;700&family=Work+Sans:wght@200;400;600&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../global.css">
+    <link rel="canonical" href="https://unholydevotion.com/blog/index.html">
+
     <style>
-        :root {
-            --bg: #000000;
-            --accent: #ff0000;
-            --text: #E5E5E5;
-            --steel: #888888;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
-        
-        html { scroll-behavior: smooth; }
-
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
-        }
-
-        body {
-            background-color: var(--bg);
-            color: var(--text);
-            font-family: 'Work Sans', 'Roboto Mono', monospace;
-            overflow-x: hidden;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            pointer-events: none;
-            z-index: 9996;
-            opacity: 0.05;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-        }
-
-        .cursor {
-            width: 12px; height: 12px;
-            background: var(--accent);
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9999;
-            box-shadow: 0 0 10px var(--accent), 0 0 30px var(--accent);
-        }
-
-        .scanlines {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            pointer-events: none;
-            z-index: 9997;
-            background: repeating-linear-gradient(0deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 1px, transparent 1px, transparent 3px);
-            opacity: 0.3;
-        }
-
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 15px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 100;
-            background: transparent;
-            border-bottom: none;
-        }
-
-        nav.scrolled { background: transparent; padding: 12px 30px; }
-
-        .nav-links { display: flex; gap: 25px; }
-
-        .nav-links a {
-            color: var(--text);
-            text-decoration: none;
-            font-size: 0.65rem;
-            font-family: 'Syncopate', system-ui;
-            transition: all 0.3s;
-            letter-spacing: 0.15em;
-            opacity: 0.8;
-            padding: 8px 12px;
-            border: 1px solid transparent;
-        }
-
-        .nav-links a:hover, .nav-links a.active {
-            color: var(--accent);
-            border: 1px solid var(--accent);
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
-            opacity: 1;
-        }
-
+        /* PAGE SPECIFIC STYLES */
         .hero {
             min-height: 50vh;
             display: flex;
@@ -120,9 +36,9 @@
         }
 
         .hero-title {
-            font-family: 'Syncopate', sans-serif;
-            font-size: 4vw;
-            font-weight: 700;
+            font-family: 'Pirata One', cursive;
+            font-size: 5rem;
+            font-weight: 400;
             text-transform: uppercase;
             letter-spacing: 0.3em;
             color: var(--accent);
@@ -138,8 +54,9 @@
         }
 
         .section-title {
-            font-family: 'Syncopate', sans-serif;
-            font-size: 1.5rem;
+            font-family: 'Pirata One', cursive;
+            font-size: 2.5rem;
+            font-weight: 400;
             color: var(--accent);
             text-transform: uppercase;
             letter-spacing: 0.3em;
@@ -149,9 +66,16 @@
             display: inline-block;
         }
 
-        .section-title::before { content: '//'; margin-right: 10px; }
+        .section-title::before {
+            content: '//';
+            margin-right: 10px;
+        }
 
-        section { min-height: 100vh; padding: 60px 50px 100px; background: var(--bg); }
+        section {
+            min-height: 100vh;
+            padding: 60px 50px 100px;
+            background: var(--bg);
+        }
 
         .blog-filters {
             display: flex;
@@ -168,13 +92,14 @@
             padding: 12px 30px;
             font-family: 'Roboto Mono', monospace;
             font-size: 0.7rem;
-            cursor: none;
+            cursor: pointer;
             transition: all 0.3s;
             text-transform: uppercase;
             letter-spacing: 0.1em;
         }
 
-        .filter-btn:hover, .filter-btn.active {
+        .filter-btn:hover,
+        .filter-btn.active {
             border-color: var(--accent);
             color: var(--accent);
             box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
@@ -236,8 +161,9 @@
         }
 
         .post-title {
-            font-family: 'Syncopate', sans-serif;
-            font-size: 1.3rem;
+            font-family: 'Pirata One', cursive;
+            font-size: 2rem;
+            font-weight: 400;
             color: var(--text);
             text-transform: uppercase;
             letter-spacing: 0.1em;
@@ -258,11 +184,13 @@
             padding: 10px 25px;
             border: 1px solid var(--accent);
             color: var(--accent);
-            font-family: 'Syncopate', sans-serif;
-            font-size: 0.65rem;
+            font-family: 'Pirata One', cursive;
+            font-size: 1.2rem;
+            font-weight: 400;
             text-transform: uppercase;
             letter-spacing: 0.15em;
             text-decoration: none;
+            cursor: pointer;
             transition: all 0.3s;
         }
 
@@ -363,25 +291,51 @@
         }
 
         @media (max-width: 768px) {
-            nav { padding: 15px 20px; }
-            .nav-links { gap: 12px; }
-            .nav-links a { font-size: 0.55rem; }
-            .hero { padding: 120px 20px 40px; }
-            .hero-title { font-size: 2rem; }
-            section { padding: 40px 20px; }
-            .featured-post { grid-template-columns: 1fr; }
-            .blog-grid { grid-template-columns: 1fr; }
+            nav {
+                padding: 15px 20px;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 0.55rem;
+            }
+
+            .hero {
+                padding: 120px 20px 40px;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 40px 20px;
+            }
+
+            .featured-post {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="cursor" id="cursor"></div>
     <div class="scanlines"></div>
 
     <nav>
-        <div></div>
-        <div class="nav-links">
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links" id="navLinks">
             <a href="../index.html">Home</a>
             <a href="../bio.html">Bio</a>
             <a href="../media.html">Media</a>
@@ -406,14 +360,17 @@
             <h2 class="section-title">LATEST POSTS</h2>
 
             <div class="blog-filters">
-                <button class="filter-btn active" data-cat="all">All</button>
-                <button class="filter-btn" data-cat="news">News</button>
-                <button class="filter-btn" data-cat="release">Releases</button>
-                <button class="filter-btn" data-cat="tour">Tour</button>
-                <button class="filter-btn" data-cat="bts">Behind The Scenes</button>
+                <button class="filter-btn active" data-group="blog" data-filter="all"
+                    data-target=".blog-item">All</button>
+                <button class="filter-btn" data-group="blog" data-filter="news" data-target=".blog-item">News</button>
+                <button class="filter-btn" data-group="blog" data-filter="release"
+                    data-target=".blog-item">Releases</button>
+                <button class="filter-btn" data-group="blog" data-filter="tour" data-target=".blog-item">Tour</button>
+                <button class="filter-btn" data-group="blog" data-filter="bts" data-target=".blog-item">Behind The
+                    Scenes</button>
             </div>
 
-            <article class="featured-post" data-cat="release">
+            <article class="featured-post" data-category="release">
                 <div class="featured-image">
                     <img src="../COMPLETO/35.jpg" alt="New Release">
                 </div>
@@ -421,13 +378,14 @@
                     <span class="post-category">New Release</span>
                     <span class="post-date">2026.03.01</span>
                     <h3 class="post-title">Genesis IV: The New EP Has Arrived</h3>
-                    <p class="post-excerpt">After months in the studio, we're thrilled to announce our latest EP "Genesis IV" is now available on all platforms. Four tracks of pure industrial darkness...</p>
+                    <p class="post-excerpt">After months in the studio, we're thrilled to announce our latest EP
+                        "Genesis IV" is now available on all platforms. Four tracks of pure industrial darkness...</p>
                     <a href="#" class="read-more">Read More</a>
                 </div>
             </article>
 
             <div class="blog-grid">
-                <article class="blog-card" data-cat="tour">
+                <article class="blog-card" data-category="tour">
                     <div class="blog-card-image">
                         <img src="../COMPLETO/PORTADA.png" alt="Tour">
                     </div>
@@ -435,12 +393,13 @@
                         <span class="post-category">Tour</span>
                         <span class="post-date">2026.02.25</span>
                         <h3 class="post-title">2026 World Tour Announced</h3>
-                        <p class="post-excerpt">Berlin, London, Tokyo, New York - we're coming to a city near you. Full dates and ticket info inside...</p>
+                        <p class="post-excerpt">Berlin, London, Tokyo, New York - we're coming to a city near you. Full
+                            dates and ticket info inside...</p>
                         <a href="#" class="read-more">Read More</a>
                     </div>
                 </article>
 
-                <article class="blog-card" data-cat="bts">
+                <article class="blog-card" data-category="bts">
                     <div class="blog-card-image">
                         <img src="../COMPLETO/Art 1.png" alt="Studio">
                     </div>
@@ -448,12 +407,13 @@
                         <span class="post-category">Behind The Scenes</span>
                         <span class="post-date">2026.02.15</span>
                         <h3 class="post-title">Inside The Studio: Hardware Set</h3>
-                        <p class="post-excerpt">A look at the equipment and techniques used in creating our latest hardware-focused release...</p>
+                        <p class="post-excerpt">A look at the equipment and techniques used in creating our latest
+                            hardware-focused release...</p>
                         <a href="#" class="read-more">Read More</a>
                     </div>
                 </article>
 
-                <article class="blog-card" data-cat="news">
+                <article class="blog-card" data-category="news">
                     <div class="blog-card-image">
                         <img src="../COMPLETO/EXPERIMENT 2.png" alt="News">
                     </div>
@@ -461,12 +421,13 @@
                         <span class="post-category">News</span>
                         <span class="post-date">2026.01.28</span>
                         <h3 class="post-title">Collaboration Announced</h3>
-                        <p class="post-excerpt">Exciting news! We're working with some incredible artists on upcoming projects. More details soon...</p>
+                        <p class="post-excerpt">Exciting news! We're working with some incredible artists on upcoming
+                            projects. More details soon...</p>
                         <a href="#" class="read-more">Read More</a>
                     </div>
                 </article>
 
-                <article class="blog-card" data-cat="release">
+                <article class="blog-card" data-category="release">
                     <div class="blog-card-image">
                         <img src="../COMPLETO/UNHOLY 2.png" alt="Album">
                     </div>
@@ -474,12 +435,13 @@
                         <span class="post-category">Releases</span>
                         <span class="post-date">2026.01.10</span>
                         <h3 class="post-title">Year In Review: 2025</h3>
-                        <p class="post-excerpt">A look back at our releases, tours, and milestones from an incredible year...</p>
+                        <p class="post-excerpt">A look back at our releases, tours, and milestones from an incredible
+                            year...</p>
                         <a href="#" class="read-more">Read More</a>
                     </div>
                 </article>
 
-                <article class="blog-card" data-cat="bts">
+                <article class="blog-card" data-category="bts">
                     <div class="blog-card-image">
                         <img src="../COMPLETO/PORTADA2.png" alt="Interview">
                     </div>
@@ -487,12 +449,13 @@
                         <span class="post-category">Behind The Scenes</span>
                         <span class="post-date">2025.12.20</span>
                         <h3 class="post-title">Gear Talk: Our Live Setup</h3>
-                        <p class="post-excerpt">Breaking down the instruments and equipment that shape our live performances...</p>
+                        <p class="post-excerpt">Breaking down the instruments and equipment that shape our live
+                            performances...</p>
                         <a href="#" class="read-more">Read More</a>
                     </div>
                 </article>
 
-                <article class="blog-card" data-cat="tour">
+                <article class="blog-card" data-category="tour">
                     <div class="blog-card-image">
                         <img src="../COMPLETO/35.jpg" alt="Photos">
                     </div>
@@ -500,7 +463,8 @@
                         <span class="post-category">Tour</span>
                         <span class="post-date">2025.12.05</span>
                         <h3 class="post-title">Photo Gallery: Europe Tour</h3>
-                        <p class="post-excerpt">Highlights from our recent European tour. Photos from Berlin, Paris, Amsterdam and more...</p>
+                        <p class="post-excerpt">Highlights from our recent European tour. Photos from Berlin, Paris,
+                            Amsterdam and more...</p>
                         <a href="#" class="read-more">Read More</a>
                     </div>
                 </article>
@@ -519,65 +483,7 @@
         <p>&copy; 2026 UNHOLY DEVOTION. ALL RIGHTS RESERVED.</p>
     </footer>
 
-    <script>
-        const cursor = document.getElementById('cursor');
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-        if (!prefersReducedMotion) {
-            let mouseX = 0, mouseY = 0;
-            let cursorX = 0, cursorY = 0;
-
-            document.addEventListener('mousemove', (e) => {
-                mouseX = e.clientX;
-                mouseY = e.clientY;
-            });
-
-            function animateCursor() {
-                cursorX += (mouseX - cursorX) * 0.2;
-                cursorY += (mouseY - cursorY) * 0.2;
-                cursor.style.left = cursorX - 6 + 'px';
-                cursor.style.top = cursorY - 6 + 'px';
-                requestAnimationFrame(animateCursor);
-            }
-            animateCursor();
-
-            const interactiveElements = document.querySelectorAll('a, button');
-            interactiveElements.forEach(el => {
-                el.addEventListener('mouseenter', () => {
-                    cursor.style.transform = 'scale(2)';
-                    cursor.style.background = '#00ff41';
-                });
-                el.addEventListener('mouseleave', () => {
-                    cursor.style.transform = 'scale(1)';
-                    cursor.style.background = '#ff0000';
-                });
-            });
-        } else {
-            cursor.style.display = 'none';
-        }
-
-        window.addEventListener('scroll', () => {
-            document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 50);
-        });
-
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const blogCards = document.querySelectorAll('.blog-card, .featured-post');
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
-                const cat = btn.dataset.cat;
-                blogCards.forEach(card => {
-                    if (cat === 'all' || card.dataset.cat === cat) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-    </script>
+    <script type="module" src="../global.js"></script>
 </body>
+
 </html>

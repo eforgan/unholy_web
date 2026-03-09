@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MESSAGES | UNHOLY COMMAND</title>
+
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"
+        type="image/svg+xml">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Syncopate:wght@400;700&family=Work+Sans:wght@200;400;600&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../global.css">
+
+    <style>
+        /* ADMIN SPECIFIC STYLES */
+        body {
+            background: #000;
+            padding: 80px 40px 40px;
+        }
+
+        .admin-header {
+            max-width: 1200px;
+            margin: 0 auto 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 20px;
+        }
+
+        .admin-title {
+            font-family: 'Pirata One', cursive;
+            font-size: 3rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+        }
+
+        .admin-stats {
+            display: flex;
+            gap: 30px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--steel);
+        }
+
+        .stat-item span {
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .messages-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            gap: 20px;
+        }
+
+        .message-card {
+            background: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
+            border: 1px solid #222;
+            padding: 25px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .message-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 0 30px var(--accent-glow);
+        }
+
+        .message-card.unread::before {
+            content: 'UNREAD';
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: var(--accent);
+            color: #000;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.6rem;
+            padding: 4px 10px;
+            font-weight: bold;
+        }
+
+        .message-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .sender-info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .sender-name {
+            font-weight: bold;
+            color: var(--text);
+            font-size: 1rem;
+        }
+
+        .sender-email {
+            color: var(--steel);
+            font-size: 0.75rem;
+        }
+
+        .message-date {
+            color: var(--steel);
+            font-size: 0.7rem;
+        }
+
+        .message-body {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.95rem;
+            color: var(--text);
+            line-height: 1.6;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .message-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .action-btn {
+            background: transparent;
+            border: 1px solid #333;
+            color: var(--steel);
+            padding: 8px 15px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.65rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+        }
+
+        .action-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .action-btn.delete:hover {
+            background: var(--accent);
+            color: #000;
+        }
+
+        .no-messages {
+            text-align: center;
+            padding: 100px;
+            font-family: 'Pirata One', cursive;
+            font-size: 3rem;
+            color: #111;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+        }
+
+        /* OVERRIDE FOR ADMIN PAGES */
+        nav {
+            background: rgba(0, 0, 0, 0.9) !important;
+            border-bottom: 1px solid #222;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="scanlines"></div>
+
+    <nav>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="../index.html">Home</a>
+            <a href="messages.html" class="active">Messages</a>
+            <a href="../index.html">Logout</a>
+        </div>
+    </nav>
+
+    <header class="admin-header">
+        <h1 class="admin-title">Communications</h1>
+        <div class="admin-stats">
+            <div class="stat-item">INBOX: <span id="totalCount">0</span></div>
+            <div class="stat-item">UNREAD: <span id="unreadCount">0</span></div>
+        </div>
+    </header>
+
+    <div class="messages-container" id="messagesContainer">
+        <!-- Messages will be injected here -->
+        <div class="no-messages">Silence...</div>
+    </div>
+
+    <script type="module" src="../global.js"></script>
+    <script>
+        // Mock CRM logic for demo
+        const messages = [
+            {
+                id: 1,
+                name: "Erik Vandal",
+                email: "erik@vandal.no",
+                date: "2026-03-05 14:20",
+                body: "I'm interested in booking UNHOLY for a ritual event in Oslo. What are your current rates for a 3-hour live performance?",
+                unread: true
+            },
+            {
+                id: 2,
+                name: "Sarah Chen",
+                email: "sarah@ra.co",
+                date: "2026-03-04 09:15",
+                body: "Loved the Genesis IV release. We'd like to feature a 'Behind the Scenes' article on Resident Advisor next month. Are you available for a video interview?",
+                unread: false
+            },
+            {
+                id: 3,
+                name: "Marco Silva",
+                email: "marco@berghain.de",
+                date: "2026-03-02 23:45",
+                body: "The set last night was absolutely crushing. Let's talk about the summer residency dates.",
+                unread: true
+            }
+        ];
+
+        function renderMessages() {
+            const container = document.getElementById('messagesContainer');
+            const totalCount = document.getElementById('totalCount');
+            const unreadCount = document.getElementById('unreadCount');
+
+            if (messages.length === 0) {
+                container.innerHTML = '<div class="no-messages">Silence...</div>';
+                totalCount.textContent = '0';
+                unreadCount.textContent = '0';
+                return;
+            }
+
+            totalCount.textContent = messages.length;
+            unreadCount.textContent = messages.filter(m => m.unread).length;
+
+            container.innerHTML = messages.map(m => `
+                <div class="message-card ${m.unread ? 'unread' : ''}" data-id="${m.id}">
+                    <div class="message-header">
+                        <div class="sender-info">
+                            <span class="sender-name">${m.name}</span>
+                            <span class="sender-email">${m.email}</span>
+                        </div>
+                        <span class="message-date">${m.date}</span>
+                    </div>
+                    <div class="message-body">${m.body}</div>
+                    <div class="message-actions">
+                        ${m.unread ? `<button class="action-btn" onclick="markRead(${m.id})">Mark Read</button>` : ''}
+                        <button class="action-btn">Reply</button>
+                        <button class="action-btn delete" onclick="deleteMessage(${m.id})">Delete</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        window.markRead = (id) => {
+            const msg = messages.find(m => m.id === id);
+            if (msg) msg.unread = false;
+            renderMessages();
+        };
+
+        window.deleteMessage = (id) => {
+            const index = messages.findIndex(m => m.id === id);
+            if (index > -1) {
+                messages.splice(index, 1);
+                renderMessages();
+            }
+        };
+
+        // Initial render
+        document.addEventListener('DOMContentLoaded', renderMessages);
+    </script>
+</body>
+
+</html>

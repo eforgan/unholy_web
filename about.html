@@ -5,109 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABOUT | UNHOLY DEVOTION</title>
-    
-    <meta name="description" content="UNHOLY DEVOTION - Digital collective from Buenos Aires. Industrial techno, dark ambient, experimental electronic music.">
+
+    <meta name="description"
+        content="UNHOLY DEVOTION - Digital collective from Buenos Aires. Industrial techno, dark ambient, experimental electronic music.">
     <meta name="keywords" content="UNHOLY, DEVOTION, about, bio, biography, industrial, techno, Buenos Aires">
     <meta name="robots" content="index, follow">
-    
+
     <meta property="og:title" content="ABOUT | UNHOLY DEVOTION">
-    <meta property="og:description" content="Learn about UNHOLY DEVOTION - the digital collective redefining industrial techno.">
+    <meta property="og:description"
+        content="Learn about UNHOLY DEVOTION - the digital collective redefining industrial techno.">
     <meta property="og:type" content="website">
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" type="image/svg+xml">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Work+Sans:wght@200;400;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"
+        type="image/svg+xml">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Syncopate:wght@400;700&family=Work+Sans:wght@200;400;600&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="global.css">
+    <link rel="canonical" href="https://unholydevotion.com/about.html">
+
     <style>
-        :root {
-            --bg: #000000;
-            --accent: #ff0000;
-            --text: #E5E5E5;
-            --steel: #888888;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
-        html { scroll-behavior: smooth; }
-
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
-        }
-
-        body {
-            background-color: var(--bg);
-            color: var(--text);
-            font-family: 'Work Sans', 'Roboto Mono', monospace;
-            overflow-x: hidden;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            pointer-events: none;
-            z-index: 9996;
-            opacity: 0.05;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-        }
-
-        .cursor {
-            width: 12px; height: 12px;
-            background: var(--accent);
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9999;
-            box-shadow: 0 0 10px var(--accent), 0 0 30px var(--accent);
-        }
-
-        .scanlines {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            pointer-events: none;
-            z-index: 9997;
-            background: repeating-linear-gradient(0deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 1px, transparent 1px, transparent 3px);
-            opacity: 0.3;
-        }
-
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 15px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 100;
-            background: transparent;
-            border-bottom: none;
-        }
-
-        nav.scrolled { background: transparent; padding: 12px 30px; }
-
-        .nav-links { display: flex; gap: 25px; }
-
-        .nav-links a {
-            color: var(--text);
-            text-decoration: none;
-            font-size: 0.65rem;
-            font-family: 'Syncopate', system-ui;
-            transition: all 0.3s;
-            letter-spacing: 0.15em;
-            opacity: 0.8;
-            padding: 8px 12px;
-            border: 1px solid transparent;
-        }
-
-        .nav-links a:hover, .nav-links a.active {
-            color: var(--accent);
-            border: 1px solid var(--accent);
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
-            opacity: 1;
-        }
-
+        /* PAGE SPECIFIC STYLES */
         .hero {
             min-height: 50vh;
             display: flex;
@@ -119,9 +38,9 @@
         }
 
         .hero-title {
-            font-family: 'Syncopate', sans-serif;
-            font-size: 4vw;
-            font-weight: 700;
+            font-family: 'Pirata One', cursive;
+            font-size: 5rem;
+            font-weight: 400;
             text-transform: uppercase;
             letter-spacing: 0.3em;
             color: var(--accent);
@@ -136,11 +55,15 @@
             letter-spacing: 0.3em;
         }
 
-        section { padding: 60px 50px 100px; background: var(--bg); }
+        section {
+            padding: 60px 50px 100px;
+            background: var(--bg);
+        }
 
         .section-title {
-            font-family: 'Syncopate', sans-serif;
-            font-size: 1.5rem;
+            font-family: 'Pirata One', cursive;
+            font-size: 2.5rem;
+            font-weight: 400;
             color: var(--accent);
             text-transform: uppercase;
             letter-spacing: 0.3em;
@@ -150,7 +73,10 @@
             display: inline-block;
         }
 
-        .section-title::before { content: '//'; margin-right: 10px; }
+        .section-title::before {
+            content: '//';
+            margin-right: 10px;
+        }
 
         .about-container {
             max-width: 1200px;
@@ -188,7 +114,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, rgba(255,0,0,0.1) 0%, transparent 50%);
+            background: linear-gradient(45deg, rgba(255, 0, 0, 0.1) 0%, transparent 50%);
             z-index: 1;
             pointer-events: none;
         }
@@ -229,8 +155,9 @@
         }
 
         .stat-number {
-            font-family: 'Syncopate', sans-serif;
-            font-size: 2.5rem;
+            font-family: 'Pirata One', cursive;
+            font-size: 4rem;
+            font-weight: 400;
             color: var(--accent);
             display: block;
             text-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
@@ -282,8 +209,9 @@
         }
 
         .timeline-year {
-            font-family: 'Syncopate', sans-serif;
-            font-size: 1rem;
+            font-family: 'Pirata One', cursive;
+            font-size: 2rem;
+            font-weight: 400;
             color: var(--accent);
             margin-bottom: 10px;
         }
@@ -325,8 +253,9 @@
         }
 
         .gear-name {
-            font-family: 'Syncopate', sans-serif;
-            font-size: 0.75rem;
+            font-family: 'Pirata One', cursive;
+            font-size: 1.2rem;
+            font-weight: 400;
             color: var(--text);
             text-transform: uppercase;
             letter-spacing: 0.1em;
@@ -382,29 +311,58 @@
         }
 
         @media (max-width: 900px) {
-            .about-container { grid-template-columns: 1fr; }
-            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media (max-width: 768px) {
-            nav { padding: 15px 20px; }
-            .nav-links { gap: 12px; }
-            .nav-links a { font-size: 0.55rem; }
-            .hero { padding: 120px 20px 40px; }
-            .hero-title { font-size: 2rem; }
-            section { padding: 40px 20px; }
-            .stats-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+            nav {
+                padding: 15px 20px;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 0.55rem;
+            }
+
+            .hero {
+                padding: 120px 20px 40px;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 40px 20px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="cursor" id="cursor"></div>
     <div class="scanlines"></div>
 
     <nav>
-        <div></div>
-        <div class="nav-links">
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links" id="navLinks">
             <a href="index.html">Home</a>
             <a href="bio.html">Bio</a>
             <a href="media.html">Media</a>
@@ -431,26 +389,26 @@
             </div>
             <div class="about-content">
                 <h2 class="section-title">WHO WE ARE</h2>
-                
+
                 <p class="about-lead">
-                    Emerged from the underground in 2024. Born in darkness, raised by chaos. 
+                    Emerged from the underground in 2024. Born in darkness, raised by chaos.
                     UNHOLY DEVOTION is a digital collective that transcends genres and defies conventions.
                 </p>
-                
+
                 <p class="about-text">
-                    Based in the shadows of Buenos Aires, we are sound designers, visual artists, 
-                    and ritual architects creating experiences that blur the line between reality 
-                    and the digital abyss. Our philosophy is simple: no genres. No rules. Only 
+                    Based in the shadows of Buenos Aires, we are sound designers, visual artists,
+                    and ritual architects creating experiences that blur the line between reality
+                    and the digital abyss. Our philosophy is simple: no genres. No rules. Only
                     devotion to the craft.
                 </p>
-                
+
                 <p class="about-text">
-                    We have performed in the most exclusive underground venues across Europe and Asia, 
-                    bringing our unique blend of industrial techno, dark ambient, and experimental 
-                    noise to audiences worldwide. Every performance is a ritual, every track a prayer 
+                    We have performed in the most exclusive underground venues across Europe and Asia,
+                    bringing our unique blend of industrial techno, dark ambient, and experimental
+                    noise to audiences worldwide. Every performance is a ritual, every track a prayer
                     to the void.
                 </p>
-                
+
                 <div class="stats-grid">
                     <div class="stat-item">
                         <span class="stat-number">50+</span>
@@ -474,32 +432,36 @@
 
         <div class="timeline-section">
             <h2 class="section-title">TIMELINE</h2>
-            
+
             <div class="timeline">
                 <div class="timeline-item">
                     <span class="timeline-year">2024</span>
                     <h3 class="timeline-title">Formation</h3>
-                    <p class="timeline-desc">UNHOLY DEVOTION emerges from the underground. First release "Genesis IV" EP establishes our sound.</p>
+                    <p class="timeline-desc">UNHOLY DEVOTION emerges from the underground. First release "Genesis IV" EP
+                        establishes our sound.</p>
                 </div>
-                
+
                 <div class="timeline-item">
                     <span class="timeline-year">2024</span>
                     <h3 class="timeline-title">Europe Debut Tour</h3>
-                    <p class="timeline-desc">First European tour including Berghain, Fabric, and De School. Critical acclaim follows.</p>
+                    <p class="timeline-desc">First European tour including Berghain, Fabric, and De School. Critical
+                        acclaim follows.</p>
                 </div>
-                
+
                 <div class="timeline-item">
                     <span class="timeline-year">2025</span>
                     <h3 class="timeline-title">"Unholy Devotion" LP</h3>
-                    <p class="timeline-desc">Debut album released. Features collaborations with international artists.</p>
+                    <p class="timeline-desc">Debut album released. Features collaborations with international artists.
+                    </p>
                 </div>
-                
+
                 <div class="timeline-item">
                     <span class="timeline-year">2025</span>
                     <h3 class="timeline-title">Asia Expansion</h3>
-                    <p class="timeline-desc">First Asia tour including Tokyo, Seoul, and Singapore. Growing global presence.</p>
+                    <p class="timeline-desc">First Asia tour including Tokyo, Seoul, and Singapore. Growing global
+                        presence.</p>
                 </div>
-                
+
                 <div class="timeline-item">
                     <span class="timeline-year">2026</span>
                     <h3 class="timeline-title">World Tour</h3>
@@ -510,7 +472,7 @@
 
         <div class="gear-section">
             <h2 class="section-title">EQUIPMENT</h2>
-            
+
             <div class="gear-grid">
                 <div class="gear-item">
                     <span class="gear-name">Roland TR-808</span>
@@ -559,46 +521,7 @@
         <p>&copy; 2026 UNHOLY DEVOTION. ALL RIGHTS RESERVED.</p>
     </footer>
 
-    <script>
-        const cursor = document.getElementById('cursor');
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-        if (!prefersReducedMotion) {
-            let mouseX = 0, mouseY = 0;
-            let cursorX = 0, cursorY = 0;
-
-            document.addEventListener('mousemove', (e) => {
-                mouseX = e.clientX;
-                mouseY = e.clientY;
-            });
-
-            function animateCursor() {
-                cursorX += (mouseX - cursorX) * 0.2;
-                cursorY += (mouseY - cursorY) * 0.2;
-                cursor.style.left = cursorX - 6 + 'px';
-                cursor.style.top = cursorY - 6 + 'px';
-                requestAnimationFrame(animateCursor);
-            }
-            animateCursor();
-
-            const interactiveElements = document.querySelectorAll('a, button');
-            interactiveElements.forEach(el => {
-                el.addEventListener('mouseenter', () => {
-                    cursor.style.transform = 'scale(2)';
-                    cursor.style.background = '#00ff41';
-                });
-                el.addEventListener('mouseleave', () => {
-                    cursor.style.transform = 'scale(1)';
-                    cursor.style.background = '#ff0000';
-                });
-            });
-        } else {
-            cursor.style.display = 'none';
-        }
-
-        window.addEventListener('scroll', () => {
-            document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 50);
-        });
-    </script>
+    <script type="module" src="global.js"></script>
 </body>
+
 </html>

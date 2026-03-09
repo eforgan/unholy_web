@@ -5,16 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MEDIA | UNHOLY DEVOTION</title>
-    
+
     <meta name="description" content="UNHOLY DEVOTION media gallery. Photos, videos, artwork and visual content.">
     <meta name="keywords" content="UNHOLY, DEVOTION, media, gallery, photos, videos, artwork">
     <meta name="robots" content="index, follow">
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" type="image/svg+xml">
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"
+        type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Work+Sans:wght@200;400;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Syncopate:wght@400;700&family=Work+Sans:wght@200;400;600&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="global.css">
+    <link rel="canonical" href="https://unholydevotion.com/media.html">
+
     <style>
         :root {
             --bg: #000000;
@@ -23,12 +28,24 @@
             --steel: #888888;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
 
         @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
         }
 
         body {
@@ -40,8 +57,10 @@
         body::before {
             content: '';
             position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             pointer-events: none;
             z-index: 9996;
             opacity: 0.05;
@@ -50,11 +69,13 @@
 
         .scanlines {
             position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             pointer-events: none;
             z-index: 9997;
-            background: repeating-linear-gradient(0deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 1px, transparent 1px, transparent 3px);
+            background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0px, rgba(0, 0, 0, 0.1) 1px, transparent 1px, transparent 3px);
             opacity: 0.3;
         }
 
@@ -82,13 +103,15 @@
             text-decoration: none;
             font-size: 0.65rem;
             font-family: 'Syncopate', system-ui;
+            cursor: pointer;
             transition: all 0.3s;
             letter-spacing: 0.15em;
             padding: 8px 12px;
             border: 1px solid transparent;
         }
 
-        .nav-links a:hover, .nav-links a.active {
+        .nav-links a:hover,
+        .nav-links a.active {
             color: var(--accent);
             border: 1px solid var(--accent);
             box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
@@ -105,9 +128,9 @@
         }
 
         .hero-title {
-            font-family: 'Syncopate', sans-serif;
-            font-size: 3rem;
-            font-weight: 700;
+            font-family: 'Pirata One', cursive;
+            font-size: 5rem;
+            font-weight: 400;
             text-transform: uppercase;
             letter-spacing: 0.3em;
             color: var(--accent);
@@ -121,8 +144,9 @@
         }
 
         .section-title {
-            font-family: 'Syncopate', sans-serif;
-            font-size: 1.5rem;
+            font-family: 'Pirata One', cursive;
+            font-size: 2.5rem;
+            font-weight: 400;
             color: var(--accent);
             text-transform: uppercase;
             letter-spacing: 0.3em;
@@ -132,7 +156,9 @@
             display: inline-block;
         }
 
-        .section-title::before { content: '// '; }
+        .section-title::before {
+            content: '// ';
+        }
 
         .media-filter {
             display: flex;
@@ -154,7 +180,8 @@
             letter-spacing: 0.1em;
         }
 
-        .filter-btn:hover, .filter-btn.active {
+        .filter-btn:hover,
+        .filter-btn.active {
             border-color: var(--accent);
             color: var(--accent);
             box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
@@ -280,14 +307,38 @@
         }
 
         @media (max-width: 768px) {
-            nav { padding: 12px 15px; }
-            .nav-links { gap: 10px; }
-            .nav-links a { font-size: 0.5rem; padding: 6px 8px; }
-            .hero { padding: 80px 20px 30px; }
-            .hero-title { font-size: 1.8rem; }
-            section { padding: 30px 20px; }
-            .gallery-grid { grid-template-columns: 1fr; }
-            .video-grid { grid-template-columns: 1fr; }
+            nav {
+                padding: 12px 15px;
+            }
+
+            .nav-links {
+                gap: 10px;
+            }
+
+            .nav-links a {
+                font-size: 0.5rem;
+                padding: 6px 8px;
+            }
+
+            .hero {
+                padding: 80px 20px 30px;
+            }
+
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            section {
+                padding: 30px 20px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -296,7 +347,12 @@
     <div class="scanlines"></div>
 
     <nav>
-        <div class="nav-links">
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links" id="navLinks">
             <a href="index.html">Home</a>
             <a href="bio.html">Bio</a>
             <a href="media.html" class="active">Media</a>
@@ -317,31 +373,34 @@
 
     <section>
         <h2 class="section-title">PHOTOS</h2>
-        
+
         <div class="media-filter">
-            <button class="filter-btn active">All</button>
-            <button class="filter-btn">Photos</button>
-            <button class="filter-btn">Videos</button>
-            <button class="filter-btn">Artwork</button>
+            <button class="filter-btn active" data-group="main" data-filter="all"
+                data-target=".gallery-item">All</button>
+            <button class="filter-btn" data-group="main" data-filter="photos"
+                data-target=".gallery-item">Photos</button>
+            <button class="filter-btn" data-group="main" data-filter="artwork"
+                data-target=".gallery-item">Artwork</button>
         </div>
 
         <div class="gallery-grid">
-            <div class="gallery-item" style="background-image: url('COMPLETO/Art 1.png');">
+            <div class="gallery-item" data-category="artwork" style="background-image: url('COMPLETO/Art 1.png');">
                 <span class="label-overlay">ARTWORK_001</span>
             </div>
-            <div class="gallery-item" style="background-image: url('COMPLETO/FOTO UNO.png');">
+            <div class="gallery-item" data-category="photos" style="background-image: url('COMPLETO/FOTO UNO.png');">
                 <span class="label-overlay">PORTRAIT_ALPHA</span>
             </div>
-            <div class="gallery-item" style="background-image: url('COMPLETO/FOTO DOS.png');">
+            <div class="gallery-item" data-category="photos" style="background-image: url('COMPLETO/FOTO DOS.png');">
                 <span class="label-overlay">PORTRAIT_BETA</span>
             </div>
-            <div class="gallery-item" style="background-image: url('COMPLETO/IMG_2439.png');">
+            <div class="gallery-item" data-category="photos" style="background-image: url('COMPLETO/IMG_2439.png');">
                 <span class="label-overlay">FIELD_REC_01</span>
             </div>
-            <div class="gallery-item" style="background-image: url('COMPLETO/Art 1.png');">
+            <div class="gallery-item" data-category="artwork" style="background-image: url('COMPLETO/Art 1.png');">
                 <span class="label-overlay">ARTWORK_002</span>
             </div>
-            <div class="gallery-item" style="background-image: url('COMPLETO/EXPERIMENT 2.png');">
+            <div class="gallery-item" data-category="artwork"
+                style="background-image: url('COMPLETO/EXPERIMENT 2.png');">
                 <span class="label-overlay">EXPERIMENT_02</span>
             </div>
         </div>
@@ -349,15 +408,22 @@
 
     <section>
         <h2 class="section-title">VIDEOS</h2>
-        
+
+        <div class="media-filter" style="margin-top: 30px;">
+            <button class="filter-btn active" data-group="videos" data-filter="all"
+                data-target=".video-item">All</button>
+            <button class="filter-btn" data-group="videos" data-filter="live" data-target=".video-item">Live</button>
+            <button class="filter-btn" data-group="videos" data-filter="studio"
+                data-target=".video-item">Studio</button>
+        </div>
         <div class="video-grid">
-            <div class="video-item">
+            <div class="video-item" data-category="live">
                 <video src="COMPLETO/optimized/1.mp4" muted loop playsinline></video>
             </div>
-            <div class="video-item">
+            <div class="video-item" data-category="studio">
                 <video src="COMPLETO/optimized/2.mp4" muted loop playsinline></video>
             </div>
-            <div class="video-item">
+            <div class="video-item" data-category="live">
                 <video src="COMPLETO/optimized/3.mp4" muted loop playsinline></video>
             </div>
         </div>
@@ -374,15 +440,7 @@
         <p>&copy; 2026 UNHOLY DEVOTION. ALL RIGHTS RESERVED.</p>
     </footer>
 
-    <script>
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-            });
-        });
-    </script>
+    <script type="module" src="global.js"></script>
 </body>
+
 </html>

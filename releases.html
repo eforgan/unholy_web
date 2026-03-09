@@ -5,125 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RELEASES | UNHOLY DEVOTION</title>
-    
-    <meta name="description" content="UNHOLY DEVOTION official releases. EPs, LPs, Singles and remixes. Dark industrial techno from Buenos Aires.">
+
+    <meta name="description"
+        content="UNHOLY DEVOTION official releases. EPs, LPs, Singles and remixes. Dark industrial techno from Buenos Aires.">
     <meta name="keywords" content="UNHOLY, DEVOTION, techno, industrial, releases, EP, LP, album, music">
     <meta name="robots" content="index, follow">
-    
+
     <meta property="og:title" content="RELEASES | UNHOLY DEVOTION">
     <meta property="og:description" content="Official discography. Download on all platforms.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" type="image/svg+xml">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Work+Sans:wght@200;400;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="styles.css">
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"
+        type="image/svg+xml">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Syncopate:wght@400;700&family=Work+Sans:wght@200;400;600&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="global.css">
+    <link rel="canonical" href="https://unholydevotion.com/releases.html">
     <style>
-        :root {
-            --bg: #000000;
-            --accent: #ff0000;
-            --accent-glow: #ff0000;
-            --text: #E5E5E5;
-            --steel: #888888;
-            --glass: rgba(255, 255, 255, 0.03);
-            --metal: #1a1a1a;
-        }
-
-        html { scroll-behavior: smooth; }
-
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
-            html { scroll-behavior: auto; }
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
-
-        body {
-            background-color: var(--bg);
-            color: var(--text);
-            font-family: 'Work Sans', 'Roboto Mono', monospace;
-            overflow-x: hidden;
-            letter-spacing: -0.02em;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            pointer-events: none;
-            z-index: 9996;
-            opacity: 0.05;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-        }
-
-        .cursor {
-            width: 12px; height: 12px;
-            background: var(--accent);
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9999;
-            box-shadow: 0 0 10px var(--accent), 0 0 30px var(--accent);
-            transition: transform 0.1s ease;
-        }
-
-        .scanlines {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            pointer-events: none;
-            z-index: 9997;
-            background: repeating-linear-gradient(0deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 1px, transparent 1px, transparent 3px);
-            opacity: 0.3;
-        }
-
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 15px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 100;
-            background: transparent;
-            border-bottom: none;
-        }
-
-        nav.scrolled {
-            background: transparent;
-            padding: 12px 30px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 25px;
-        }
-
-        .nav-links a {
-            color: var(--text);
-            text-decoration: none;
-            font-size: 0.65rem;
-            font-family: 'Syncopate', system-ui;
-            transition: all 0.3s;
-            letter-spacing: 0.15em;
-            opacity: 0.8;
-            padding: 8px 12px;
-            border: 1px solid transparent;
-        }
-
-        .nav-links a:hover, .nav-links a.active {
-            color: var(--accent);
-            border: 1px solid var(--accent);
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
-            opacity: 1;
-        }
-
+        /* PAGE SPECIFIC STYLES */
         .hero {
             min-height: 60vh;
             display: flex;
@@ -136,9 +39,9 @@
         }
 
         .hero-title {
-            font-family: 'Syncopate', sans-serif;
-            font-size: 4vw;
-            font-weight: 700;
+            font-family: 'Pirata One', cursive;
+            font-size: 6vw;
+            font-weight: 400;
             text-transform: uppercase;
             letter-spacing: 0.3em;
             color: var(--accent);
@@ -148,9 +51,20 @@
         }
 
         @keyframes glitchText {
-            0%, 90%, 100% { text-shadow: 0 0 30px rgba(255, 0, 0, 0.5); }
-            92% { text-shadow: -3px 0 #00ff41, 3px 0 #ff0000; }
-            94% { text-shadow: 3px 0 #00ff41, -3px 0 #ff0000; }
+
+            0%,
+            90%,
+            100% {
+                text-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+            }
+
+            92% {
+                text-shadow: -3px 0 #00ff41, 3px 0 #ff0000;
+            }
+
+            94% {
+                text-shadow: 3px 0 #00ff41, -3px 0 #ff0000;
+            }
         }
 
         .hero-subtitle {
@@ -162,8 +76,9 @@
         }
 
         .section-title {
-            font-family: 'Syncopate', sans-serif;
-            font-size: 1.5rem;
+            font-family: 'Pirata One', cursive;
+            font-size: 2.5rem;
+            font-weight: 400;
             color: var(--accent);
             text-transform: uppercase;
             letter-spacing: 0.3em;
@@ -201,13 +116,14 @@
             padding: 12px 30px;
             font-family: 'Roboto Mono', monospace;
             font-size: 0.7rem;
-            cursor: none;
+            cursor: pointer;
             transition: all 0.3s;
             text-transform: uppercase;
             letter-spacing: 0.1em;
         }
 
-        .filter-btn:hover, .filter-btn.active {
+        .filter-btn:hover,
+        .filter-btn.active {
             border-color: var(--accent);
             color: var(--accent);
             box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
@@ -250,7 +166,7 @@
 
         .release-card:hover {
             border-color: var(--accent);
-            box-shadow: 0 0 40px rgba(255, 0, 0, 0.2), 0 20px 40px rgba(0,0,0,0.5);
+            box-shadow: 0 0 40px rgba(255, 0, 0, 0.2), 0 20px 40px rgba(0, 0, 0, 0.5);
             transform: translateY(-5px);
         }
 
@@ -280,7 +196,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 50%);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 50%);
             display: flex;
             align-items: flex-end;
             justify-content: center;
@@ -298,7 +214,7 @@
             height: 60px;
             border: 2px solid var(--accent);
             border-radius: 50%;
-            background: rgba(0,0,0,0.7);
+            background: rgba(0, 0, 0, 0.7);
             cursor: none;
             display: flex;
             align-items: center;
@@ -340,8 +256,9 @@
         }
 
         .release-title {
-            font-family: 'Syncopate', sans-serif;
-            font-size: 1rem;
+            font-family: 'Pirata One', cursive;
+            font-size: 1.5rem;
+            font-weight: 400;
             color: var(--text);
             text-transform: uppercase;
             letter-spacing: 0.1em;
@@ -431,25 +348,53 @@
         }
 
         @media (max-width: 768px) {
-            nav { padding: 15px 20px; }
-            .nav-links { gap: 15px; }
-            .nav-links a { font-size: 0.6rem; padding: 6px 8px; }
-            .hero { padding: 120px 20px 60px; }
-            .hero-title { font-size: 2rem; }
-            section { padding: 60px 20px; }
-            .releases-grid { grid-template-columns: 1fr; gap: 30px; }
-            .release-links { justify-content: center; }
+            nav {
+                padding: 15px 20px;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .nav-links a {
+                font-size: 0.6rem;
+                padding: 6px 8px;
+            }
+
+            .hero {
+                padding: 120px 20px 60px;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+
+            .releases-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .release-links {
+                justify-content: center;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="cursor" id="cursor"></div>
     <div class="scanlines"></div>
 
     <nav>
-        <div></div>
-        <div class="nav-links">
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links" id="navLinks">
             <a href="index.html">Home</a>
             <a href="bio.html">Bio</a>
             <a href="media.html">Media</a>
@@ -472,17 +417,22 @@
     <section>
         <div style="text-align: center;">
             <h2 class="section-title">CATALOG</h2>
-            
+
             <div class="releases-filter">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="ep">EPs</button>
-                <button class="filter-btn" data-filter="lp">LPs</button>
-                <button class="filter-btn" data-filter="single">Singles</button>
-                <button class="filter-btn" data-filter="remix">Remixes</button>
+                <button class="filter-btn active" data-group="releases" data-filter="all"
+                    data-target=".release-card">All</button>
+                <button class="filter-btn" data-group="releases" data-filter="ep"
+                    data-target=".release-card">EPs</button>
+                <button class="filter-btn" data-group="releases" data-filter="lp"
+                    data-target=".release-card">LPs</button>
+                <button class="filter-btn" data-group="releases" data-filter="single"
+                    data-target=".release-card">Singles</button>
+                <button class="filter-btn" data-group="releases" data-filter="remix"
+                    data-target=".release-card">Remixes</button>
             </div>
 
             <div class="releases-grid">
-                <article class="release-card" data-type="ep">
+                <article class="release-card" data-category="ep">
                     <div class="release-cover">
                         <img src="COMPLETO/35.jpg" alt="Genesis IV Cover">
                         <div class="release-overlay">
@@ -500,14 +450,15 @@
                             04. Genesis IV (Remix)
                         </div>
                         <div class="release-links">
-                            <a href="https://soundcloud.com/unholydevotion" target="_blank" class="release-link">SoundCloud</a>
+                            <a href="https://soundcloud.com/unholydevotion" target="_blank"
+                                class="release-link">SoundCloud</a>
                             <a href="https://spotify.com" target="_blank" class="release-link">Spotify</a>
                             <a href="https://bandcamp.com" target="_blank" class="release-link">Bandcamp</a>
                         </div>
                     </div>
                 </article>
 
-                <article class="release-card" data-type="lp">
+                <article class="release-card" data-category="lp">
                     <div class="release-cover">
                         <img src="COMPLETO/UNHOLY 2.png" alt="Unholy Devotion Cover">
                         <div class="release-overlay">
@@ -527,7 +478,8 @@
                             06. Salvation (Final)
                         </div>
                         <div class="release-links">
-                            <a href="https://soundcloud.com/unholydevotion" target="_blank" class="release-link">SoundCloud</a>
+                            <a href="https://soundcloud.com/unholydevotion" target="_blank"
+                                class="release-link">SoundCloud</a>
                             <a href="https://spotify.com" target="_blank" class="release-link">Spotify</a>
                             <a href="https://bandcamp.com" target="_blank" class="release-link">Bandcamp</a>
                         </div>
@@ -551,14 +503,15 @@
                             03. Hardware Set (Instrumental)
                         </div>
                         <div class="release-links">
-                            <a href="https://soundcloud.com/unholydevotion" target="_blank" class="release-link">SoundCloud</a>
+                            <a href="https://soundcloud.com/unholydevotion" target="_blank"
+                                class="release-link">SoundCloud</a>
                             <a href="https://spotify.com" target="_blank" class="release-link">Spotify</a>
                             <a href="https://bandcamp.com" target="_blank" class="release-link">Bandcamp</a>
                         </div>
                     </div>
                 </article>
 
-                <article class="release-card" data-type="ep">
+                <article class="release-card" data-category="ep">
                     <div class="release-cover">
                         <img src="COMPLETO/EXPERIMENT 2.png" alt="Experiment Cover">
                         <div class="release-overlay">
@@ -576,14 +529,15 @@
                             04. Static Void
                         </div>
                         <div class="release-links">
-                            <a href="https://soundcloud.com/unholydevotion" target="_blank" class="release-link">SoundCloud</a>
+                            <a href="https://soundcloud.com/unholydevotion" target="_blank"
+                                class="release-link">SoundCloud</a>
                             <a href="https://spotify.com" target="_blank" class="release-link">Spotify</a>
                             <a href="https://bandcamp.com" target="_blank" class="release-link">Bandcamp</a>
                         </div>
                     </div>
                 </article>
 
-                <article class="release-card" data-type="remix">
+                <article class="release-card" data-category="remix">
                     <div class="release-cover">
                         <img src="COMPLETO/PORTADA.png" alt="Remixes Cover">
                         <div class="release-overlay">
@@ -600,7 +554,8 @@
                             03. Artist C - Track (UNHOLY Remix)
                         </div>
                         <div class="release-links">
-                            <a href="https://soundcloud.com/unholydevotion" target="_blank" class="release-link">SoundCloud</a>
+                            <a href="https://soundcloud.com/unholydevotion" target="_blank"
+                                class="release-link">SoundCloud</a>
                             <a href="https://spotify.com" target="_blank" class="release-link">Spotify</a>
                         </div>
                     </div>
@@ -622,7 +577,8 @@
                             Stay tuned for updates.
                         </div>
                         <div class="release-links">
-                            <a href="https://instagram.com/unholydevotion" target="_blank" class="release-link">Follow</a>
+                            <a href="https://instagram.com/unholydevotion" target="_blank"
+                                class="release-link">Follow</a>
                         </div>
                     </div>
                 </article>
@@ -641,81 +597,7 @@
         <p>&copy; 2026 UNHOLY DEVOTION. ALL RIGHTS RESERVED.</p>
     </footer>
 
-    <script>
-        const cursor = document.getElementById('cursor');
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-        if (!prefersReducedMotion) {
-            let mouseX = 0, mouseY = 0;
-            let cursorX = 0, cursorY = 0;
-
-            document.addEventListener('mousemove', (e) => {
-                mouseX = e.clientX;
-                mouseY = e.clientY;
-            });
-
-            function animateCursor() {
-                cursorX += (mouseX - cursorX) * 0.2;
-                cursorY += (mouseY - cursorY) * 0.2;
-                cursor.style.left = cursorX - 6 + 'px';
-                cursor.style.top = cursorY - 6 + 'px';
-                requestAnimationFrame(animateCursor);
-            }
-            animateCursor();
-
-            const interactiveElements = document.querySelectorAll('a, button, .release-card');
-            interactiveElements.forEach(el => {
-                el.addEventListener('mouseenter', () => {
-                    cursor.style.transform = 'scale(2)';
-                    cursor.style.background = '#00ff41';
-                    cursor.style.boxShadow = '0 0 20px #00ff41';
-                });
-                el.addEventListener('mouseleave', () => {
-                    cursor.style.transform = 'scale(1)';
-                    cursor.style.background = '#ff0000';
-                    cursor.style.boxShadow = '0 0 10px #ff0000, 0 0 30px #ff0000';
-                });
-            });
-        } else {
-            cursor.style.display = 'none';
-        }
-
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
-        });
-
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const releaseCards = document.querySelectorAll('.release-card');
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
-                const filter = btn.dataset.filter;
-
-                releaseCards.forEach(card => {
-                    if (filter === 'all' || card.dataset.type === filter) {
-                        card.style.display = 'block';
-                        setTimeout(() => card.style.opacity = '1', 10);
-                    } else {
-                        card.style.opacity = '0';
-                        setTimeout(() => card.style.display = 'none', 300);
-                    }
-                });
-            });
-        });
-
-        document.querySelectorAll('.play-preview').forEach(btn => {
-            btn.addEventListener('click', () => {
-                alert('Audio preview would play here');
-            });
-        });
-    </script>
+    <script type="module" src="global.js"></script>
 </body>
+
 </html>

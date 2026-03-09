@@ -5,112 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MERCH | UNHOLY DEVOTION</title>
-    
-    <meta name="description" content="UNHOLY DEVOTION official merchandise. T-shirts, hoodies, accessories and limited editions.">
+
+    <meta name="description"
+        content="UNHOLY DEVOTION official merchandise. T-shirts, hoodies, accessories and limited editions.">
     <meta name="keywords" content="UNHOLY, DEVOTION, merchandise, merch, t-shirt, hoodie, clothing, apparel">
     <meta name="robots" content="index, follow">
-    
+
     <meta property="og:title" content="MERCH | UNHOLY DEVOTION">
     <meta property="og:description" content="Official merchandise. Get your UNHOLY gear now.">
     <meta property="og:type" content="website">
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" type="image/svg+xml">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Work+Sans:wght@200;400;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
-    
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"
+        type="image/svg+xml">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Syncopate:wght@400;700&family=Work+Sans:wght@200;400;600&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="global.css">
+    <link rel="canonical" href="https://unholydevotion.com/merch.html">
+
     <style>
-        :root {
-            --bg: #000000;
-            --accent: #ff0000;
-            --text: #E5E5E5;
-            --steel: #888888;
-            --glass: rgba(255, 255, 255, 0.03);
-        }
-
-        html { scroll-behavior: smooth; }
-
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
-
-        body {
-            background-color: var(--bg);
-            color: var(--text);
-            font-family: 'Work Sans', 'Roboto Mono', monospace;
-            overflow-x: hidden;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            pointer-events: none;
-            z-index: 9996;
-            opacity: 0.05;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-        }
-
-        .cursor {
-            width: 12px; height: 12px;
-            background: var(--accent);
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9999;
-            box-shadow: 0 0 10px var(--accent), 0 0 30px var(--accent);
-        }
-
-        .scanlines {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            pointer-events: none;
-            z-index: 9997;
-            background: repeating-linear-gradient(0deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 1px, transparent 1px, transparent 3px);
-            opacity: 0.3;
-        }
-
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 15px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 100;
-            background: transparent;
-            border-bottom: none;
-        }
-
-        nav.scrolled { background: transparent; padding: 12px 30px; }
-
-        .nav-links { display: flex; gap: 25px; }
-
-        .nav-links a {
-            color: var(--text);
-            text-decoration: none;
-            font-size: 0.65rem;
-            font-family: 'Syncopate', system-ui;
-            transition: all 0.3s;
-            letter-spacing: 0.15em;
-            opacity: 0.8;
-            padding: 8px 12px;
-            border: 1px solid transparent;
-        }
-
-        .nav-links a:hover, .nav-links a.active {
-            color: var(--accent);
-            border: 1px solid var(--accent);
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
-            opacity: 1;
-        }
-
+        /* PAGE SPECIFIC STYLES */
         .hero {
             min-height: 50vh;
             display: flex;
@@ -122,9 +38,9 @@
         }
 
         .hero-title {
-            font-family: 'Syncopate', sans-serif;
-            font-size: 4vw;
-            font-weight: 700;
+            font-family: 'Pirata One', cursive;
+            font-size: 6vw;
+            font-weight: 400;
             text-transform: uppercase;
             letter-spacing: 0.3em;
             color: var(--accent);
@@ -140,8 +56,9 @@
         }
 
         .section-title {
-            font-family: 'Syncopate', sans-serif;
-            font-size: 1.5rem;
+            font-family: 'Pirata One', cursive;
+            font-size: 2.5rem;
+            font-weight: 400;
             color: var(--accent);
             text-transform: uppercase;
             letter-spacing: 0.3em;
@@ -151,9 +68,16 @@
             display: inline-block;
         }
 
-        .section-title::before { content: '//'; margin-right: 10px; }
+        .section-title::before {
+            content: '//';
+            margin-right: 10px;
+        }
 
-        section { min-height: 100vh; padding: 60px 50px 100px; background: var(--bg); }
+        section {
+            min-height: 100vh;
+            padding: 60px 50px 100px;
+            background: var(--bg);
+        }
 
         .cart-icon {
             position: fixed;
@@ -166,16 +90,22 @@
             width: 45px;
             height: 45px;
             border-radius: 50%;
-            cursor: none;
+            cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: all 0.3s;
         }
 
-        .cart-icon:hover { background: var(--accent); color: #000; }
+        .cart-icon:hover {
+            background: var(--accent);
+            color: #000;
+        }
 
-        .cart-icon svg { width: 20px; height: 20px; }
+        .cart-icon svg {
+            width: 20px;
+            height: 20px;
+        }
 
         .cart-count {
             position: absolute;
@@ -208,13 +138,14 @@
             padding: 12px 30px;
             font-family: 'Roboto Mono', monospace;
             font-size: 0.7rem;
-            cursor: none;
+            cursor: pointer;
             transition: all 0.3s;
             text-transform: uppercase;
             letter-spacing: 0.1em;
         }
 
-        .cat-btn:hover, .cat-btn.active {
+        .cat-btn:hover,
+        .cat-btn.active {
             border-color: var(--accent);
             color: var(--accent);
             box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
@@ -250,7 +181,9 @@
             transition: opacity 0.3s;
         }
 
-        .product-card:hover::after { opacity: 1; }
+        .product-card:hover::after {
+            opacity: 1;
+        }
 
         .product-card:hover {
             border-color: var(--accent);
@@ -302,11 +235,14 @@
             text-transform: uppercase;
         }
 
-        .product-info { padding: 25px; }
+        .product-info {
+            padding: 25px;
+        }
 
         .product-title {
-            font-family: 'Syncopate', sans-serif;
-            font-size: 0.9rem;
+            font-family: 'Pirata One', cursive;
+            font-size: 1.4rem;
+            font-weight: 400;
             color: var(--text);
             text-transform: uppercase;
             letter-spacing: 0.1em;
@@ -342,11 +278,12 @@
             color: var(--steel);
             font-family: 'Roboto Mono', monospace;
             font-size: 0.65rem;
-            cursor: none;
+            cursor: pointer;
             transition: all 0.3s;
         }
 
-        .size-btn:hover, .size-btn.active {
+        .size-btn:hover,
+        .size-btn.active {
             border-color: var(--accent);
             color: var(--accent);
         }
@@ -357,11 +294,12 @@
             background: transparent;
             border: 1px solid var(--accent);
             color: var(--accent);
-            font-family: 'Syncopate', sans-serif;
-            font-size: 0.7rem;
+            font-family: 'Pirata One', cursive;
+            font-size: 1.2rem;
+            font-weight: 400;
             text-transform: uppercase;
             letter-spacing: 0.2em;
-            cursor: none;
+            cursor: pointer;
             transition: all 0.3s;
         }
 
@@ -385,7 +323,9 @@
             overflow-y: auto;
         }
 
-        .cart-modal.open { right: 0; }
+        .cart-modal.open {
+            right: 0;
+        }
 
         .cart-overlay {
             position: fixed;
@@ -393,14 +333,17 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.8);
+            background: rgba(0, 0, 0, 0.8);
             z-index: 999;
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s;
         }
 
-        .cart-overlay.open { opacity: 1; visibility: visible; }
+        .cart-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
 
         .cart-header {
             display: flex;
@@ -424,13 +367,17 @@
             border: none;
             color: var(--steel);
             font-size: 1.5rem;
-            cursor: none;
+            cursor: pointer;
             transition: color 0.3s;
         }
 
-        .cart-close:hover { color: var(--accent); }
+        .cart-close:hover {
+            color: var(--accent);
+        }
 
-        .cart-items { margin-bottom: 30px; }
+        .cart-items {
+            margin-bottom: 30px;
+        }
 
         .cart-item {
             display: flex;
@@ -446,7 +393,9 @@
             flex-shrink: 0;
         }
 
-        .cart-item-info { flex: 1; }
+        .cart-item-info {
+            flex: 1;
+        }
 
         .cart-item-name {
             font-family: 'Syncopate', sans-serif;
@@ -550,32 +499,66 @@
         }
 
         @media (max-width: 768px) {
-            nav { padding: 15px 20px; }
-            .nav-links { gap: 12px; }
-            .nav-links a { font-size: 0.55rem; }
-            .cart-icon { right: 80px; }
-            .hero { padding: 120px 20px 40px; }
-            .hero-title { font-size: 2rem; }
-            section { padding: 40px 20px; }
-            .merch-grid { grid-template-columns: 1fr; gap: 20px; }
-            .cart-modal { width: 100%; right: -100%; }
+            nav {
+                padding: 15px 20px;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 0.55rem;
+            }
+
+            .cart-icon {
+                right: 80px;
+            }
+
+            .hero {
+                padding: 120px 20px 40px;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 40px 20px;
+            }
+
+            .merch-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .cart-modal {
+                width: 100%;
+                right: -100%;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="cursor" id="cursor"></div>
     <div class="scanlines"></div>
     <div class="cart-overlay" id="cartOverlay"></div>
 
     <button class="cart-icon" id="cartIcon" aria-label="Open cart">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+                d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+        </svg>
         <span class="cart-count" id="cartCount">0</span>
     </button>
 
     <nav>
-        <div></div>
-        <div class="nav-links">
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links" id="navLinks">
             <a href="index.html">Home</a>
             <a href="bio.html">Bio</a>
             <a href="media.html">Media</a>
@@ -600,11 +583,16 @@
             <h2 class="section-title">COLLECTION</h2>
 
             <div class="merch-categories">
-                <button class="cat-btn active" data-cat="all">All</button>
-                <button class="cat-btn" data-cat="tshirt">T-Shirts</button>
-                <button class="cat-btn" data-cat="hoodie">Hoodies</button>
-                <button class="cat-btn" data-cat="accessory">Accessories</button>
-                <button class="cat-btn" data-cat="limited">Limited</button>
+                <button class="cat-btn filter-btn active" data-group="merch" data-filter="all"
+                    data-target=".product-card">All</button>
+                <button class="cat-btn filter-btn" data-group="merch" data-filter="tshirt"
+                    data-target=".product-card">T-Shirts</button>
+                <button class="cat-btn filter-btn" data-group="merch" data-filter="hoodie"
+                    data-target=".product-card">Hoodies</button>
+                <button class="cat-btn filter-btn" data-group="merch" data-filter="accessory"
+                    data-target=".product-card">Accessories</button>
+                <button class="cat-btn filter-btn" data-group="merch" data-filter="limited"
+                    data-target=".product-card">Limited</button>
             </div>
 
             <div class="merch-grid">
@@ -629,7 +617,8 @@
 
                 <article class="product-card" data-cat="tshirt">
                     <div class="product-image">
-                        <img src="https://placehold.co/400x400/111/ff0000?text=DEVOTION+GRAPHIC" alt="Devotion Graphic Tee">
+                        <img src="https://placehold.co/400x400/111/ff0000?text=DEVOTION+GRAPHIC"
+                            alt="Devotion Graphic Tee">
                     </div>
                     <div class="product-info">
                         <h3 class="product-title">Devotion Graphic Tee</h3>
@@ -712,7 +701,7 @@
                     </div>
                 </article>
 
-                <article class="product-card" data-cat="limited">
+                <article class="product-card" data-category="limited">
                     <span class="product-badge">Limited</span>
                     <div class="product-image">
                         <img src="https://placehold.co/400x400/111/ff0000?text=TOUR+JACKET" alt="Tour Jacket">
@@ -730,7 +719,7 @@
                     </div>
                 </article>
 
-                <article class="product-card" data-cat="limited">
+                <article class="product-card" data-category="limited">
                     <span class="product-badge">Limited</span>
                     <div class="product-image">
                         <img src="https://placehold.co/400x400/111/ff0000?text=VINYL+PRINT" alt="Vinyl Print">
@@ -755,7 +744,9 @@
             <button class="cart-close" id="cartClose">&times;</button>
         </div>
         <div class="cart-items" id="cartItems">
-            <p style="color: var(--steel); font-family: 'Roboto Mono', monospace; font-size: 0.75rem; text-align: center; padding: 40px 0;">Your cart is empty</p>
+            <p
+                style="color: var(--steel); font-family: 'Roboto Mono', monospace; font-size: 0.75rem; text-align: center; padding: 40px 0;">
+                Your cart is empty</p>
         </div>
         <div class="cart-total">
             <span class="cart-total-label">Total</span>
@@ -776,7 +767,6 @@
     </footer>
 
     <script>
-        const cursor = document.getElementById('cursor');
         const cartIcon = document.getElementById('cartIcon');
         const cartModal = document.getElementById('cartModal');
         const cartOverlay = document.getElementById('cartOverlay');
@@ -784,42 +774,8 @@
         const cartCount = document.getElementById('cartCount');
         const cartItems = document.getElementById('cartItems');
         const cartTotal = document.getElementById('cartTotal');
-        
+
         let cart = [];
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-        if (!prefersReducedMotion) {
-            let mouseX = 0, mouseY = 0;
-            let cursorX = 0, cursorY = 0;
-
-            document.addEventListener('mousemove', (e) => {
-                mouseX = e.clientX;
-                mouseY = e.clientY;
-            });
-
-            function animateCursor() {
-                cursorX += (mouseX - cursorX) * 0.2;
-                cursorY += (mouseY - cursorY) * 0.2;
-                cursor.style.left = cursorX - 6 + 'px';
-                cursor.style.top = cursorY - 6 + 'px';
-                requestAnimationFrame(animateCursor);
-            }
-            animateCursor();
-
-            const interactiveElements = document.querySelectorAll('a, button, .product-card');
-            interactiveElements.forEach(el => {
-                el.addEventListener('mouseenter', () => {
-                    cursor.style.transform = 'scale(2)';
-                    cursor.style.background = '#00ff41';
-                });
-                el.addEventListener('mouseleave', () => {
-                    cursor.style.transform = 'scale(1)';
-                    cursor.style.background = '#ff0000';
-                });
-            });
-        } else {
-            cursor.style.display = 'none';
-        }
 
         window.addEventListener('scroll', () => {
             document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 50);
@@ -845,13 +801,13 @@
                 const title = card.querySelector('.product-title').textContent;
                 const price = card.querySelector('.product-price').textContent;
                 const activeSize = card.querySelector('.size-btn.active');
-                
+
                 cart.push({
                     title: title,
                     price: price,
                     size: activeSize ? activeSize.textContent : 'One Size'
                 });
-                
+
                 updateCart();
                 openCart();
             });
@@ -859,7 +815,7 @@
 
         function updateCart() {
             cartCount.textContent = cart.length;
-            
+
             if (cart.length === 0) {
                 cartItems.innerHTML = '<p style="color: var(--steel); font-family: \'Roboto Mono\', monospace; font-size: 0.75rem; text-align: center; padding: 40px 0;">Your cart is empty</p>';
                 cartTotal.textContent = '$0.00';
@@ -874,7 +830,7 @@
                         <div class="cart-item-price">${item.price}</div>
                     </div>
                 `).join('');
-                
+
                 let total = cart.reduce((sum, item) => sum + parseFloat(item.price.replace('$', '')), 0);
                 cartTotal.textContent = '$' + total.toFixed(2);
             }
@@ -908,4 +864,5 @@
         });
     </script>
 </body>
+
 </html>

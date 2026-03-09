@@ -768,6 +768,7 @@
         <p>&copy; 2026 UNHOLY DEVOTION. ALL RIGHTS RESERVED.</p>
     </footer>
 
+    <script src="global.js"></script>
     <script>
         const cartIcon = document.getElementById('cartIcon');
         const cartModal = document.getElementById('cartModal');
@@ -778,10 +779,6 @@
         const cartTotal = document.getElementById('cartTotal');
 
         let cart = [];
-
-        window.addEventListener('scroll', () => {
-            document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 50);
-        });
 
         function openCart() {
             cartModal.classList.add('open');
@@ -837,25 +834,6 @@
                 cartTotal.textContent = '$' + total.toFixed(2);
             }
         }
-
-        const catBtns = document.querySelectorAll('.cat-btn');
-        const productCards = document.querySelectorAll('.product-card');
-
-        catBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                catBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
-                const cat = btn.dataset.cat;
-                productCards.forEach(card => {
-                    if (cat === 'all' || card.dataset.cat === cat) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
 
         document.querySelectorAll('.size-btn').forEach(btn => {
             btn.addEventListener('click', () => {

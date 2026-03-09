@@ -210,12 +210,12 @@
         <h2 class="section-title">PHOTOS</h2>
 
         <div class="media-filter">
-            <button class="filter-btn active" data-group="main" data-group="media" data-target=".gallery-item"
-                data-category="all" data-target=".gallery-item">All</button>
-            <button class="filter-btn" data-group="main" data-group="media" data-target=".gallery-item"
-                data-category="photos" data-target=".gallery-item">Photos</button>
-            <button class="filter-btn" data-group="main" data-group="media" data-target=".gallery-item"
-                data-category="artwork" data-target=".gallery-item">Artwork</button>
+            <button class="filter-btn active" data-group="media" data-target=".gallery-item"
+                data-filter="all">All</button>
+            <button class="filter-btn" data-group="media" data-target=".gallery-item"
+                data-filter="photos">Photos</button>
+            <button class="filter-btn" data-group="media" data-target=".gallery-item"
+                data-filter="artwork">Artwork</button>
         </div>
 
         <div class="gallery-grid">
@@ -256,12 +256,12 @@
         <h2 class="section-title">VIDEOS</h2>
 
         <div class="media-filter" style="margin-top: 30px;">
-            <button class="filter-btn active" data-group="videos" data-group="media" data-target=".gallery-item"
-                data-category="all" data-target=".video-item">All</button>
-            <button class="filter-btn" data-group="videos" data-group="media" data-target=".gallery-item"
-                data-category="live" data-target=".video-item">Live</button>
-            <button class="filter-btn" data-group="videos" data-group="media" data-target=".gallery-item"
-                data-category="studio" data-target=".video-item">Studio</button>
+            <button class="filter-btn active" data-group="video-filter" data-target=".video-item"
+                data-filter="all">All</button>
+            <button class="filter-btn" data-group="video-filter" data-target=".video-item"
+                data-filter="live">Live</button>
+            <button class="filter-btn" data-group="video-filter" data-target=".video-item"
+                data-filter="studio">Studio</button>
         </div>
         <div class="video-grid">
             <div class="video-item" data-category="live">
@@ -287,7 +287,7 @@
         <p>&copy; 2026 UNHOLY DEVOTION. ALL RIGHTS RESERVED.</p>
     </footer>
 
-    <script type="module" src="global.js"></script>
+    <script src="global.js"></script>
 </body>
 
 </html>

@@ -76,31 +76,34 @@
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 25px 40px;
+            padding: 20px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             z-index: 100;
-            background: transparent;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #222;
         }
 
-        nav.scrolled { background: rgba(0, 0, 0, 0.9); padding: 15px 40px; }
+        nav.scrolled { background: rgba(0, 0, 0, 0.95); padding: 15px 40px; }
 
         .nav-logo {
             font-family: 'Syncopate', system-ui;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             color: var(--accent);
             text-decoration: none;
             letter-spacing: 0.2em;
             text-shadow: 0 0 10px var(--accent);
+            font-weight: 700;
         }
 
-        .nav-links { display: flex; gap: 30px; }
+        .nav-links { display: flex; gap: 25px; }
 
         .nav-links a {
             color: var(--text);
             text-decoration: none;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-family: 'Syncopate', system-ui;
             transition: all 0.3s;
             letter-spacing: 0.15em;

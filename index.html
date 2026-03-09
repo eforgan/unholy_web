@@ -283,23 +283,41 @@
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 25px 40px;
+            padding: 20px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             z-index: 100;
-            background: transparent;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #222;
+        }
+
+        .nav-logo-container {
+            flex-shrink: 0;
+        }
+
+        .nav-logo {
+            font-family: 'Syncopate', system-ui;
+            font-size: 0.9rem;
+            color: var(--accent);
+            text-decoration: none;
+            letter-spacing: 0.2em;
+            text-shadow: 0 0 10px var(--accent);
+            font-weight: 700;
         }
 
         .nav-links {
             display: flex;
-            gap: 40px;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
         }
 
         .nav-links a {
             color: var(--text);
             text-decoration: none;
-            font-size: 0.75rem;
+            font-size: 0.65rem;
             font-family: 'Syncopate', system-ui;
             transition: all 0.3s;
             letter-spacing: 0.2em;
@@ -1772,16 +1790,24 @@
             }
             
             nav {
-                padding: 20px;
+                padding: 15px 20px;
+                overflow-x: auto;
+            }
+            
+            .nav-logo {
+                font-size: 0.75rem;
+                white-space: nowrap;
             }
             
             .nav-links {
-                gap: 15px;
+                gap: 10px;
             }
             
             .nav-links a {
-                font-size: 0.6rem;
-                padding: 8px 10px;
+                font-size: 0.5rem;
+                padding: 6px 8px;
+                white-space: nowrap;
+                letter-spacing: 0.1em;
             }
             
             .hero {
@@ -1878,13 +1904,18 @@
     </button>
 
     <nav>
-        <div></div>
+        <div class="nav-logo-container">
+            <a href="index.html" class="nav-logo">UNHOLY</a>
+        </div>
         <div class="nav-links">
-            <a href="index.html" class="active">Home</a>
+            <a href="#home" class="active">Home</a>
+            <a href="#bio">Bio</a>
+            <a href="#media">Media</a>
+            <a href="#sets">Sets</a>
+            <a href="#tour">Tour</a>
             <a href="releases.html">Releases</a>
             <a href="merch.html">Merch</a>
             <a href="about.html">About</a>
-            <a href="press.html">Press</a>
             <a href="blog/index.html">Blog</a>
             <a href="#contact">Contact</a>
         </div>

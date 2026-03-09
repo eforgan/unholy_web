@@ -68,7 +68,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 15px 30px;
+            padding: 15px 50px 15px 250px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -135,10 +135,10 @@
         .hero-vertical-text {
             position: absolute;
             left: 30px;
-            top: 50%;
+            top: 35%;
             transform: translateY(-50%);
             font-family: 'Syncopate', sans-serif;
-            font-size: 1.2vw;
+            font-size: 2vw;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.3em;
@@ -151,6 +151,7 @@
             z-index: 10;
             cursor: pointer;
             transition: all 0.3s;
+            line-height: 2;
         }
 
         @keyframes laserGlow {
@@ -279,7 +280,12 @@
         }
 
         @media (max-width: 768px) {
-            nav { padding: 12px 15px; }
+            nav { padding: 12px 15px 12px 80px; }
+            .hero-vertical-text { 
+                left: 15px; 
+                font-size: 0.9rem;
+                top: 30%;
+            }
             .nav-links { gap: 10px; }
             .nav-links a { font-size: 0.5rem; padding: 6px 8px; }
             .hero-title { font-size: 1.8rem; letter-spacing: 0.2em; }

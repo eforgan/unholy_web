@@ -78,9 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. ANIMATIONS ON SCROLL (SimpleFade)
-    const fadeItems = document.querySelectorAll('.fade-in');
-    if (fadeItems.length > 0) {
+    // 4. ANIMATIONS ON SCROLL (Revealer)
+    const revealItems = document.querySelectorAll('.reveal-on-scroll, .fade-in');
+    if (revealItems.length > 0) {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -89,6 +89,22 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }, { threshold: 0.1 });
 
-        fadeItems.forEach(item => observer.observe(item));
+        revealItems.forEach(item => observer.observe(item));
     }
+
+    // 5. CUSTOM CURSOR
+    const cursor = document.createElement('div');
+    cursor.id = 'custom-cursor';
+    document.body.appendChild(cursor);
+
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX - 10 + 'px';
+        cursor.style.top = e.clientY - 10 + 'px';
+    });
+
+    const interactiveElements = document.querySelectorAll('a, button, .filter-btn, .cat-btn, input, textarea');
+    interactiveElements.forEach(el => {
+        el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+        el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+    });
 });

@@ -82,22 +82,11 @@
             justify-content: space-between;
             align-items: center;
             z-index: 100;
-            background: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #222;
+            background: transparent;
+            border-bottom: none;
         }
 
-        nav.scrolled { background: rgba(0, 0, 0, 0.95); padding: 15px 40px; }
-
-        .nav-logo {
-            font-family: 'Syncopate', system-ui;
-            font-size: 0.9rem;
-            color: var(--accent);
-            text-decoration: none;
-            letter-spacing: 0.2em;
-            text-shadow: 0 0 10px var(--accent);
-            font-weight: 700;
-        }
+        nav.scrolled { background: transparent; padding: 15px 40px; }
 
         .nav-links { display: flex; gap: 25px; }
 
@@ -391,7 +380,7 @@
     <div class="scanlines"></div>
 
     <nav>
-        <a href="../index.html" class="nav-logo">UNHOLY</a>
+        <div></div>
         <div class="nav-links">
             <a href="../index.html">Home</a>
             <a href="../releases.html">Releases</a>

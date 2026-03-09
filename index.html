@@ -288,23 +288,8 @@
             justify-content: space-between;
             align-items: center;
             z-index: 100;
-            background: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #222;
-        }
-
-        .nav-logo-container {
-            flex-shrink: 0;
-        }
-
-        .nav-logo {
-            font-family: 'Syncopate', system-ui;
-            font-size: 0.9rem;
-            color: var(--accent);
-            text-decoration: none;
-            letter-spacing: 0.2em;
-            text-shadow: 0 0 10px var(--accent);
-            font-weight: 700;
+            background: transparent;
+            border-bottom: none;
         }
 
         .nav-links {
@@ -1172,9 +1157,8 @@
 
         /* Nav scroll effect */
         nav.scrolled {
-            background: rgba(0, 0, 0, 0.8);
+            background: transparent;
             padding: 15px 40px;
-            border-bottom: none;
         }
 
         /* Page Transitions */
@@ -1904,9 +1888,7 @@
     </button>
 
     <nav>
-        <div class="nav-logo-container">
-            <a href="index.html" class="nav-logo">UNHOLY</a>
-        </div>
+        <div></div>
         <div class="nav-links">
             <a href="#home" class="active">Home</a>
             <a href="#bio">Bio</a>

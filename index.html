@@ -20,6 +20,10 @@
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"
         type="image/svg+xml">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="video" href="COMPLETO/optimized/1.mp4" type="video/mp4">
+    <link rel="preload" as="image" href="assets/logo.png">
     <link
         href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Syncopate:wght@400;700&family=Work+Sans:wght@200;400;600&family=Roboto+Mono:wght@400;500&display=swap"
         rel="stylesheet">
@@ -314,7 +318,8 @@
     </nav>
 
     <section class="hero">
-        <video src="COMPLETO/optimized/1.mp4" autoplay loop muted playsinline></video>
+        <video src="COMPLETO/optimized/1.mp4" autoplay loop muted playsinline preload="auto" poster="assets/logo.png"
+            style="object-fit: cover;"></video>
 
         <div class="hero-vertical-text">UNHOLY DEVOTION</div>
 

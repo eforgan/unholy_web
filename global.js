@@ -10,10 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
             navLinks.classList.toggle('active');
             hamburger.querySelectorAll('span').forEach((span, index) => {
                 if (navLinks.classList.contains('active')) {
+                    document.body.style.overflow = 'hidden';
                     if (index === 0) span.style.transform = 'translateY(7px) rotate(45deg)';
                     if (index === 1) span.style.opacity = '0';
                     if (index === 2) span.style.transform = 'translateY(-7px) rotate(-45deg)';
                 } else {
+                    document.body.style.overflow = '';
                     span.style.transform = 'none';
                     span.style.opacity = '1';
                 }
@@ -24,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
+                document.body.style.overflow = '';
                 hamburger.querySelectorAll('span').forEach(span => span.style.transform = 'none');
                 hamburger.querySelectorAll('span').forEach(span => span.style.opacity = '1');
             });

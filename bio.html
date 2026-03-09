@@ -25,33 +25,6 @@
 
     <style>
         /* PAGE SPECIFIC STYLES */
-        .hero {
-            min-height: 50vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 100px 50px 50px;
-            text-align: center;
-        }
-
-        .hero-title {
-            font-family: 'Pirata One', cursive;
-            font-size: 5rem;
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 0.3em;
-            color: var(--accent);
-            text-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
-            margin-bottom: 20px;
-        }
-
-        section {
-            padding: 50px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
         .bio-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -122,74 +95,7 @@
             text-transform: uppercase;
         }
 
-        footer {
-            padding: 40px;
-            text-align: center;
-            border-top: 1px solid var(--accent);
-            font-size: 0.65rem;
-            font-family: 'Roboto Mono', monospace;
-            color: var(--steel);
-            text-transform: uppercase;
-            letter-spacing: 0.3em;
-        }
-
-        footer::before {
-            content: '[ SYSTEM STATUS: ONLINE ]';
-            display: block;
-            margin-bottom: 20px;
-            color: var(--accent);
-            text-shadow: 0 0 10px var(--accent);
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-bottom: 25px;
-            flex-wrap: wrap;
-        }
-
-        .social-links a {
-            color: var(--steel);
-            text-decoration: none;
-            font-size: 0.6rem;
-            letter-spacing: 0.2em;
-            transition: all 0.3s;
-            padding: 8px 15px;
-            border: 1px solid transparent;
-        }
-
-        .social-links a:hover {
-            color: var(--accent);
-            border-color: var(--accent);
-        }
-
         @media (max-width: 768px) {
-            nav {
-                padding: 12px 15px;
-            }
-
-            .nav-links {
-                gap: 10px;
-            }
-
-            .nav-links a {
-                font-size: 0.5rem;
-                padding: 6px 8px;
-            }
-
-            .hero {
-                padding: 80px 20px 30px;
-            }
-
-            .hero-title {
-                font-size: 1.8rem;
-            }
-
-            section {
-                padding: 30px 20px;
-            }
-
             .bio-container {
                 grid-template-columns: 1fr;
                 gap: 30px;

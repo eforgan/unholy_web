@@ -21,172 +21,7 @@
     <link rel="canonical" href="https://unholydevotion.com/media.html">
 
     <style>
-        :root {
-            --bg: #000000;
-            --accent: #ff0000;
-            --text: #E5E5E5;
-            --steel: #888888;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-
-            *,
-            *::before,
-            *::after {
-                animation-duration: 0.01ms !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-
-        body {
-            background-color: var(--bg);
-            color: var(--text);
-            font-family: 'Work Sans', 'Roboto Mono', monospace;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 9996;
-            opacity: 0.05;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-        }
-
-        .scanlines {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 9997;
-            background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0px, rgba(0, 0, 0, 0.1) 1px, transparent 1px, transparent 3px);
-            opacity: 0.3;
-        }
-
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 15px 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 100;
-            background: transparent;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 25px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .nav-links a {
-            color: var(--text);
-            text-decoration: none;
-            font-size: 0.65rem;
-            font-family: 'Syncopate', system-ui;
-            cursor: pointer;
-            transition: all 0.3s;
-            letter-spacing: 0.15em;
-            padding: 8px 12px;
-            border: 1px solid transparent;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: var(--accent);
-            border: 1px solid var(--accent);
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
-        }
-
-        .hero {
-            min-height: 40vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 100px 50px 50px;
-            text-align: center;
-        }
-
-        .hero-title {
-            font-family: 'Pirata One', cursive;
-            font-size: 5rem;
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 0.3em;
-            color: var(--accent);
-            text-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
-        }
-
-        section {
-            padding: 50px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-family: 'Pirata One', cursive;
-            font-size: 2.5rem;
-            font-weight: 400;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 0.3em;
-            margin-bottom: 40px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid var(--accent);
-            display: inline-block;
-        }
-
-        .section-title::before {
-            content: '// ';
-        }
-
-        .media-filter {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            background: transparent;
-            border: 1px solid #333;
-            color: var(--steel);
-            padding: 10px 25px;
-            font-family: 'Roboto Mono', monospace;
-            font-size: 0.7rem;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
-        .filter-btn:hover,
-        .filter-btn.active {
-            border-color: var(--accent);
-            color: var(--accent);
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
-        }
-
+        /* PAGE SPECIFIC STYLES */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -375,12 +210,12 @@
         <h2 class="section-title">PHOTOS</h2>
 
         <div class="media-filter">
-            <button class="filter-btn active" data-group="main" data-filter="all"
-                data-target=".gallery-item">All</button>
-            <button class="filter-btn" data-group="main" data-filter="photos"
-                data-target=".gallery-item">Photos</button>
-            <button class="filter-btn" data-group="main" data-filter="artwork"
-                data-target=".gallery-item">Artwork</button>
+            <button class="filter-btn active" data-group="main" data-group="media" data-target=".gallery-item"
+                data-category="all" data-target=".gallery-item">All</button>
+            <button class="filter-btn" data-group="main" data-group="media" data-target=".gallery-item"
+                data-category="photos" data-target=".gallery-item">Photos</button>
+            <button class="filter-btn" data-group="main" data-group="media" data-target=".gallery-item"
+                data-category="artwork" data-target=".gallery-item">Artwork</button>
         </div>
 
         <div class="gallery-grid">
@@ -410,11 +245,12 @@
         <h2 class="section-title">VIDEOS</h2>
 
         <div class="media-filter" style="margin-top: 30px;">
-            <button class="filter-btn active" data-group="videos" data-filter="all"
-                data-target=".video-item">All</button>
-            <button class="filter-btn" data-group="videos" data-filter="live" data-target=".video-item">Live</button>
-            <button class="filter-btn" data-group="videos" data-filter="studio"
-                data-target=".video-item">Studio</button>
+            <button class="filter-btn active" data-group="videos" data-group="media" data-target=".gallery-item"
+                data-category="all" data-target=".video-item">All</button>
+            <button class="filter-btn" data-group="videos" data-group="media" data-target=".gallery-item"
+                data-category="live" data-target=".video-item">Live</button>
+            <button class="filter-btn" data-group="videos" data-group="media" data-target=".gallery-item"
+                data-category="studio" data-target=".video-item">Studio</button>
         </div>
         <div class="video-grid">
             <div class="video-item" data-category="live">

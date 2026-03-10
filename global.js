@@ -107,4 +107,28 @@ document.addEventListener('DOMContentLoaded', () => {
         el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
         el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
     });
+
+    // 6. AUDIO PLAYER (Background Music)
+    const audioBtn = document.getElementById('audioToggle');
+    const bgAudio = document.getElementById('bgAudio');
+    
+    if (audioBtn && bgAudio) {
+        // Try to autoplay on page load
+        bgAudio.play().then(() => {
+            audioBtn.classList.remove('muted');
+        }).catch(() => {
+            // Autoplay blocked, show muted state
+            audioBtn.classList.add('muted');
+        });
+        
+        audioBtn.addEventListener('click', () => {
+            if (bgAudio.paused) {
+                bgAudio.play();
+                audioBtn.classList.remove('muted');
+            } else {
+                bgAudio.pause();
+                audioBtn.classList.add('muted');
+            }
+        });
+    }
 });

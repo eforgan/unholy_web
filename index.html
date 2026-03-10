@@ -32,6 +32,16 @@
 
     <style>
         /* PAGE SPECIFIC STYLES */
+        .hero-video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
         .hero {
             min-height: 100vh;
             display: flex;
@@ -67,7 +77,7 @@
         .hero-vertical-text {
             position: absolute;
             left: 30px;
-            top: calc(35% + 20px);
+            top: calc(35% + 50px);
             transform: translateY(-50%);
             font-family: 'Pirata One', cursive;
             font-size: 3vw;
@@ -318,8 +328,7 @@
     </nav>
 
     <section class="hero">
-        <video src="COMPLETO/optimized/1.mp4" autoplay loop muted playsinline preload="auto" class="hero-video-bg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-1;"></video>
-            style="object-fit: cover;"></video>
+        <video src="COMPLETO/optimized/1.mp4" autoplay loop muted playsinline preload="auto" class="hero-video-bg"></video>
 
         <div class="hero-vertical-text">UNHOLY DEVOTION</div>
 

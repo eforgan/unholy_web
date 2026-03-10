@@ -87,8 +87,10 @@ nav.scrolled {
 
 .nav-links {
     display: flex;
-    gap: 25px;
+    gap: 15px;
     align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
 }
 
 .nav-links a {

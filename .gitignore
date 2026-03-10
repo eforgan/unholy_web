@@ -26,7 +26,5 @@ build/
 *.bak
 *.tmp
 
-# Large media files (host separately)
-# COMPLETO/ - Excluded due to size (1.1GB)
-# Use external hosting (Hostinger File Manager) for videos
-COMPLETO/
+# Large media files (use Git LFS)
+# COMPLETO/

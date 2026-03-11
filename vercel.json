@@ -1,4 +1,5 @@
 {
+  "output": "static",
   "rewrites": [
     { "source": "/((?!api/).*)", "destination": "/index.html" }
   ],
